@@ -1,5 +1,5 @@
 {
-  "name": "@sarahG/cv-vuejs",
+  "name": "@sarahg/cv-vuejs",
   "version": "0.0.1",
   "description": "Cv en ligne avec vue.js",
   "main": "index.html",
@@ -19,10 +19,12 @@
   },
   "homepage": "https://github.com/SarahG4000/cv-vuejs#readme",
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
     "@becode/eslint-config": "^0.10.0",
+    "@vue/component-compiler-utils": "^3.1.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.4.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -31,7 +33,11 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "parcel-bundler": "^1.12.4",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "pug": "^3.0.0",
+    "sass": "^1.26.10",
+    "typescript": "^3.9.6",
+    "vue-template-compiler": "^2.6.11"
   },
   "lint-staged": {
     "*.json": [
