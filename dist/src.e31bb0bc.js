@@ -8902,7 +8902,7 @@ var vue_1 = __importDefault(require("vue"));
 exports.default = vue_1.default.extend({
   data: function data() {
     return {
-      bundler: "Parcel"
+      bundler: "Welcom"
     };
   }
 });
@@ -8918,11 +8918,33 @@ exports.default = vue_1.default.extend({
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _vm._v("Hello " + _vm._s(_vm.bundler))
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container is-mobile is-fullhd" }, [
+      _c("div", { staticClass: "card columns is-mobile is-one-quarter" }, [
+        _c("div", { staticClass: "card column" }, [
+          _c("img", {
+            staticClass: "img",
+            attrs: { src: "/IMG_20200520_145947.8c23fea6.jpg" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "column is-three-quarters" }, [
+          _c("p", { staticClass: "item" }, [
+            _vm._v(
+              "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, aliquam suscipit, nesciunt ex quia consequuntur vero quo corporis veritatis ea, voluptates rerum dolorem maiores inventore ipsum tempora. Dolor, ad sint."
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
           return {
@@ -8955,10 +8977,18 @@ render._withStripped = true
       
       }
     })();
-},{"vue":"../node_modules/vue/dist/vue.runtime.esm.js","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js"}],"index.js":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.runtime.esm.js","./../assets/IMG_20200520_145947.jpg":[["IMG_20200520_145947.8c23fea6.jpg","assets/IMG_20200520_145947.jpg"],"assets/IMG_20200520_145947.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js"}],"../node_modules/bulma/bulma.sass":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _app = _interopRequireDefault(require("./components/app.vue"));
+
+require("bulma");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8972,15 +9002,8 @@ new Vue({
   render: function render(createElement) {
     return createElement(_app.default);
   }
-}).$mount("#appli");
-var app = new Vue({
-  el: "#app",
-  data: {
-    message: "Hello world!!"
-  }
-});
-console.log("hello word:!!");
-},{"./components/app.vue":"components/app.vue"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+}).$mount("#app"); // console.log("hello word:!!");
+},{"./components/app.vue":"components/app.vue","bulma":"../node_modules/bulma/bulma.sass"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -9008,7 +9031,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34203" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40237" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
