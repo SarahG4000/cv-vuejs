@@ -5,17 +5,45 @@
                 <h1 class="sg is-size-3 is-family-primary">
                     <!-- Sarah
                     <br />Guillaume-->
-                    {{bundler}}
+                    {{jobs}}
                 </h1>
                 <img class="img" src="../assets/IMG_20200520_145947.jpg" />
             </div>
             <div class="column is-three-quarters">
-                <h1 class="is-size-4">{{contact}}</h1>
+                <h1 class="is-size-4">{{bundler}}</h1>
                 <carousel>
-                    <CarouselSlide>1</CarouselSlide>
-                    <CarouselSlide>2</CarouselSlide>
-                    <CarouselSlide>3</CarouselSlide>
-                    <CarouselSlide>4</CarouselSlide>
+                    <CarouselSlide>
+                        <div class="box box-carousel">
+                            <h1>
+                                <span class="icon is-medium"></span><i class="fab fa-facebook-square"></i><i class="fab fa-facebook-messenger"></i></span>Contact me
+                            </h1>
+
+                            <p>
+                                <span class="icon is-medium"></span>Facebook
+                            </p>
+                            <p>
+                                <span class="icon is-medium"></span>Git
+                            </p>
+                            <p>
+                                <span class="icon is-medium"></span>Linkedin
+                            </p>
+                            <p>
+                                <span class="icon is-medium"></span>Email
+                            </p>
+                            <p>
+                                <span class="icon is-medium"></span>Discord
+                            </p>
+                        </div>
+                    </CarouselSlide>
+                    <CarouselSlide>
+                        <div class="box box-carousel"></div>
+                    </CarouselSlide>
+                    <CarouselSlide>
+                        <div class="box box-carousel"></div>
+                    </CarouselSlide>
+                    <CarouselSlide>
+                        <div class="box box-carousel"></div>
+                    </CarouselSlide>
                 </carousel>
             </div>
         </div>
@@ -29,7 +57,7 @@ export default {
     data() {
         return {
             bundler: "Sarah Guillaume",
-            contact: "Contact",
+            jobs: "Web developer",
         };
     },
     components: {
@@ -74,5 +102,9 @@ export default {
     border-radius: 0;
     box-shadow: 0 0.5em 1em -0.15em rgba(10, 10, 10, 0.4),
         0 0px 0 2px rgba(10, 10, 10, 0.02);
+}
+
+.box-carousel {
+    background-color: rgba(85, 35, 45, 0.63);
 }
 </style>

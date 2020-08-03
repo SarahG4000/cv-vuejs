@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="carousel">
         <slot></slot>
-        <button class="button is-boxed" @click.prevent="prev">Prev</button>
-        <button class="button is-boxed" @click.prevent="next">Next</button>
+        <button class="button is-boxed carousel__nav carousel__next" @click.prevent="prev">Prev</button>
+        <button class="button is-boxed carousel__nav carousel__prev" @click.prevent="next">Next</button>
     </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
     methods: {
         next() {
             this.index++;
-            if (this.index <= slidesCount) {
+            if (this.index == this.slidesCount) {
                 this.index = 0;
             }
         },
@@ -42,3 +42,20 @@ export default {
     },
 };
 </script>
+
+<style>
+.carousel {
+    position: relative;
+}
+
+.carousel__nav {
+    position: absolute;
+    margin-top: -31px;
+    top: 50px;
+    left: 10px;
+}
+.carousel.carousel__next {
+    right: 10px;
+    left: auto;
+}
+</style>

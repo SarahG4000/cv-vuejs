@@ -1,3 +1,17 @@
+.carousel {
+    position: relative;
+}
+
+.carousel__nav {
+    position: absolute;
+    margin-top: -31px;
+    top: 50px;
+    left: 10px;
+}
+.carousel.carousel__next {
+    right: 10px;
+    left: auto;
+}
 .container[data-v-df312a] {
   color: #b6c7c0;
   position: fixed;
@@ -28,6 +42,9 @@
   border-left: 2px solid #8d8d8c;
   border-radius: 0;
   box-shadow: 0 0.5em 1em -0.15em rgba(10, 10, 10, 0.4), 0 0px 0 2px rgba(10, 10, 10, 0.02);
+}
+.box-carousel[data-v-df312a] {
+  background-color: rgba(85, 35, 45, 0.63);
 }
 nav {
     position: relative;

@@ -8542,7 +8542,74 @@ if (inBrowser) {
 
 var _default = Vue;
 exports.default = _default;
-},{}],"../node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
+},{}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -8854,7 +8921,7 @@ var _default = {
     next: function next() {
       this.index++;
 
-      if (this.index <= slidesCount) {
+      if (this.index == this.slidesCount) {
         this.index = 0;
       }
     },
@@ -8882,13 +8949,14 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "carousel" },
     [
       _vm._t("default"),
       _vm._v(" "),
       _c(
         "button",
         {
-          staticClass: "button is-boxed",
+          staticClass: "button is-boxed carousel__nav carousel__next",
           on: {
             click: function($event) {
               $event.preventDefault()
@@ -8902,7 +8970,7 @@ exports.default = _default;
       _c(
         "button",
         {
-          staticClass: "button is-boxed",
+          staticClass: "button is-boxed carousel__nav carousel__prev",
           on: {
             click: function($event) {
               $event.preventDefault()
@@ -8943,9 +9011,13 @@ render._withStripped = true
         }
 
         
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/carousel/CarouselSlide.vue":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/carousel/CarouselSlide.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9034,74 +9106,7 @@ render._withStripped = true
         
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"components/app.vue":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/app.vue":[function(require,module,exports) {
 "use strict";
 
 var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
@@ -9145,7 +9150,7 @@ exports.default = {
   data: function data() {
     return {
       bundler: "Sarah Guillaume",
-      contact: "Contact"
+      jobs: "Web developer"
     };
   },
   components: {
@@ -9177,7 +9182,7 @@ exports.default = {
     _c("div", { staticClass: "box box-sg columns is-mobile is-one-quarter" }, [
       _c("div", { staticClass: "box box-sg column" }, [
         _c("h1", { staticClass: "sg is-size-3 is-family-primary" }, [
-          _vm._v("\n                " + _vm._s(_vm.bundler) + "\n            ")
+          _vm._v("\n                " + _vm._s(_vm.jobs) + "\n            ")
         ]),
         _vm._v(" "),
         _c("img", {
@@ -9190,18 +9195,58 @@ exports.default = {
         "div",
         { staticClass: "column is-three-quarters" },
         [
-          _c("h1", { staticClass: "is-size-4" }, [_vm._v(_vm._s(_vm.contact))]),
+          _c("h1", { staticClass: "is-size-4" }, [_vm._v(_vm._s(_vm.bundler))]),
           _vm._v(" "),
           _c(
             "carousel",
             [
-              _c("CarouselSlide", [_vm._v("1")]),
+              _c("CarouselSlide", [
+                _c("div", { staticClass: "box box-carousel" }, [
+                  _c("h1", [
+                    _c("span", { staticClass: "icon is-medium" }),
+                    _c("i", { staticClass: "fab fa-facebook-square" }),
+                    _c("i", { staticClass: "fab fa-facebook-messenger" }),
+                    _vm._v("Contact me\n                        ")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("span", { staticClass: "icon is-medium" }),
+                    _vm._v("Facebook\n                        ")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("span", { staticClass: "icon is-medium" }),
+                    _vm._v("Git\n                        ")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("span", { staticClass: "icon is-medium" }),
+                    _vm._v("Linkedin\n                        ")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("span", { staticClass: "icon is-medium" }),
+                    _vm._v("Email\n                        ")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("span", { staticClass: "icon is-medium" }),
+                    _vm._v("Discord\n                        ")
+                  ])
+                ])
+              ]),
               _vm._v(" "),
-              _c("CarouselSlide", [_vm._v("2")]),
+              _c("CarouselSlide", [
+                _c("div", { staticClass: "box box-carousel" })
+              ]),
               _vm._v(" "),
-              _c("CarouselSlide", [_vm._v("3")]),
+              _c("CarouselSlide", [
+                _c("div", { staticClass: "box box-carousel" })
+              ]),
               _vm._v(" "),
-              _c("CarouselSlide", [_vm._v("4")])
+              _c("CarouselSlide", [
+                _c("div", { staticClass: "box box-carousel" })
+              ])
             ],
             1
           )
