@@ -1,14 +1,16 @@
 <template>
     <div class="container is-mobile is-fullhd">
-        <!-- <h1>{{bundler}}</h1> -->
-        <div class="card columns is-mobile is-one-quarter">
-            <div class="card column">
+        <div class="box box-sg columns is-mobile is-one-quarter">
+            <div class="box box-sg column">
+                <h1 class="sg is-size-3 is-family-primary">
+                    <!-- Sarah
+                    <br />Guillaume-->
+                    {{bundler}}
+                </h1>
                 <img class="img" src="../assets/IMG_20200520_145947.jpg" />
             </div>
             <div class="column is-three-quarters">
-                <p
-                    class="item"
-                >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, aliquam suscipit, nesciunt ex quia consequuntur vero quo corporis veritatis ea, voluptates rerum dolorem maiores inventore ipsum tempora. Dolor, ad sint.</p>
+                <h1 class="is-size-4">{{contact}}</h1>
             </div>
         </div>
     </div>
@@ -20,7 +22,8 @@ import Vue from "vue";
 export default Vue.extend({
     data() {
         return {
-            bundler: "Welcom",
+            bundler: "Sarah Guillaume",
+            contact: "Contact",
         };
     },
 });
@@ -40,14 +43,26 @@ export default Vue.extend({
     justify-content: center;
     align-items: center;
     background: "rgba(0,0,0,0.5)";
-}
-
-.card {
-    background: rgb(46, 49, 59);
+    position: relative;
+    z-index: 5;
 }
 
 .img {
     height: auto;
     max-width: 100%;
+}
+.sg {
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    margin-bottom: 1%;
+    margin: 25px;
+}
+
+.box-sg {
+    border-top: 2px solid rgb(141, 141, 140);
+    border-left: 2px solid rgb(141, 141, 140);
+    border-radius: 0;
+    box-shadow: 0 0.5em 1em -0.15em rgba(10, 10, 10, 0.4),
+        0 0px 0 2px rgba(10, 10, 10, 0.02);
 }
 </style>

@@ -8902,7 +8902,8 @@ var vue_1 = __importDefault(require("vue"));
 exports.default = vue_1.default.extend({
   data: function data() {
     return {
-      bundler: "Welcom"
+      bundler: "Sarah Guillaume",
+      contact: "Contact"
     };
   }
 });
@@ -8918,33 +8919,26 @@ exports.default = vue_1.default.extend({
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container is-mobile is-fullhd" }, [
-      _c("div", { staticClass: "card columns is-mobile is-one-quarter" }, [
-        _c("div", { staticClass: "card column" }, [
-          _c("img", {
-            staticClass: "img",
-            attrs: { src: "/IMG_20200520_145947.8c23fea6.jpg" }
-          })
+  return _c("div", { staticClass: "container is-mobile is-fullhd" }, [
+    _c("div", { staticClass: "box box-sg columns is-mobile is-one-quarter" }, [
+      _c("div", { staticClass: "box box-sg column" }, [
+        _c("h1", { staticClass: "sg is-size-3 is-family-primary" }, [
+          _vm._v("\n                " + _vm._s(_vm.bundler) + "\n            ")
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "column is-three-quarters" }, [
-          _c("p", { staticClass: "item" }, [
-            _vm._v(
-              "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, aliquam suscipit, nesciunt ex quia consequuntur vero quo corporis veritatis ea, voluptates rerum dolorem maiores inventore ipsum tempora. Dolor, ad sint."
-            )
-          ])
-        ])
+        _c("img", {
+          staticClass: "img",
+          attrs: { src: "/IMG_20200520_145947.8c23fea6.jpg" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "column is-three-quarters" }, [
+        _c("h1", { staticClass: "is-size-4" }, [_vm._v(_vm._s(_vm.contact))])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
           return {
@@ -8977,7 +8971,141 @@ render._withStripped = true
       
       }
     })();
-},{"vue":"../node_modules/vue/dist/vue.runtime.esm.js","./../assets/IMG_20200520_145947.jpg":[["IMG_20200520_145947.8c23fea6.jpg","assets/IMG_20200520_145947.jpg"],"assets/IMG_20200520_145947.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js"}],"../node_modules/bulma/bulma.sass":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.runtime.esm.js","./../assets/IMG_20200520_145947.jpg":[["IMG_20200520_145947.8c23fea6.jpg","assets/IMG_20200520_145947.jpg"],"assets/IMG_20200520_145947.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js"}],"components/navapp.vue":[function(require,module,exports) {
+"use strict";
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var vue_1 = __importDefault(require("vue"));
+
+exports.default = vue_1.default.extend({
+  data: function data() {
+    return {
+      home: "Contact me",
+      competence: "Compétences",
+      experience: "Expériences",
+      formation: "Formations"
+    };
+  }
+});
+        var $6faf82 = exports.default || module.exports;
+      
+      if (typeof $6faf82 === 'function') {
+        $6faf82 = $6faf82.options;
+      }
+    
+        /* template */
+        Object.assign($6faf82, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "nav",
+    {
+      staticClass: "navbar navbar-menu is-active is-dark",
+      attrs: { role: "navigation" }
+    },
+    [
+      _c("div", { staticClass: "navbar-start" }, [
+        _c(
+          "a",
+          {
+            staticClass: "navbar-item",
+            attrs: { href: "/index.html" }
+          },
+          [_vm._v(_vm._s(_vm.home))]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "navbar-item",
+            attrs: { href: "/index.html" }
+          },
+          [_vm._v(_vm._s(_vm.formation))]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "navbar-item",
+            attrs: { href: "/index.html" }
+          },
+          [_vm._v(_vm._s(_vm.competence))]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "navbar-item",
+            attrs: { href: "/index.html" }
+          },
+          [_vm._v(_vm._s(_vm.experience))]
+        )
+      ]),
+      _vm._v(" "),
+      _vm._m(0)
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "navbar-end" }, [
+      _c("div", { staticClass: "navbar-item" }, [
+        _c("div", { staticClass: "field is-grouped" }, [
+          _c("p", { staticClass: "control" }),
+          _vm._v(" "),
+          _c("p", { staticClass: "control" })
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$6faf82', $6faf82);
+          } else {
+            api.reload('$6faf82', $6faf82);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"vue":"../node_modules/vue/dist/vue.runtime.esm.js","./../index.html":[["index.html","index.html"],"index.html"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js"}],"../node_modules/bulma/bulma.sass":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -8986,7 +9114,11 @@ render._withStripped = true
 },{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
+var _vue = _interopRequireDefault(require("vue"));
+
 var _app = _interopRequireDefault(require("./components/app.vue"));
+
+var _navapp = _interopRequireDefault(require("./components/navapp.vue"));
 
 require("bulma");
 
@@ -8997,13 +9129,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * src/index.js - container for app
  * start created 14/07/2020
  */
-// import Vue from "vue";
-new Vue({
+new _vue.default({
   render: function render(createElement) {
     return createElement(_app.default);
   }
-}).$mount("#app"); // console.log("hello word:!!");
-},{"./components/app.vue":"components/app.vue","bulma":"../node_modules/bulma/bulma.sass"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+}).$mount("#app");
+new _vue.default({
+  render: function render(createElement) {
+    return createElement(_navapp.default);
+  }
+}).$mount("#navapp"); // console.log("hello word:!!");
+},{"vue":"../node_modules/vue/dist/vue.runtime.esm.js","./components/app.vue":"components/app.vue","./components/navapp.vue":"components/navapp.vue","bulma":"../node_modules/bulma/bulma.sass"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -9031,7 +9167,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40237" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44607" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

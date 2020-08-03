@@ -10,13 +10,28 @@
   justify-content: center;
   align-items: center;
   background: "rgba(0,0,0,0.5)";
-}
-.card[data-v-df312a] {
-  background: #2e313b;
+  position: relative;
+  z-index: 5;
 }
 .img[data-v-df312a] {
   height: auto;
   max-width: 100%;
+}
+.sg[data-v-df312a] {
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  margin-bottom: 1%;
+  margin: 25px;
+}
+.box-sg[data-v-df312a] {
+  border-top: 2px solid #8d8d8c;
+  border-left: 2px solid #8d8d8c;
+  border-radius: 0;
+  box-shadow: 0 0.5em 1em -0.15em rgba(10, 10, 10, 0.4), 0 0px 0 2px rgba(10, 10, 10, 0.02);
+}
+nav {
+    position: relative;
+    z-index: 10;
 }
 @charset "UTF-8";
 /*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
