@@ -11,6 +11,12 @@
             </div>
             <div class="column is-three-quarters">
                 <h1 class="is-size-4">{{contact}}</h1>
+                <carousel>
+                    <CarouselSlide>1</CarouselSlide>
+                    <CarouselSlide>2</CarouselSlide>
+                    <CarouselSlide>3</CarouselSlide>
+                    <CarouselSlide>4</CarouselSlide>
+                </carousel>
             </div>
         </div>
     </div>
@@ -19,14 +25,18 @@
 <script lang="ts">
 import Vue from "vue";
 
-export default Vue.extend({
+export default {
     data() {
         return {
             bundler: "Sarah Guillaume",
             contact: "Contact",
         };
     },
-});
+    components: {
+        Carousel: () => import("./carousel/Carousel.vue"),
+        CarouselSlide: () => import("./carousel/CarouselSlide.vue"),
+    },
+};
 </script>
 
 <style lang="scss" scoped>

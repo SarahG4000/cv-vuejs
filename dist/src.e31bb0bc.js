@@ -8542,74 +8542,7 @@ if (inBrowser) {
 
 var _default = Vue;
 exports.default = _default;
-},{}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
+},{}],"../node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -8884,29 +8817,350 @@ function patchScopedSlots (instance) {
   }
 }
 
-},{}],"components/app.vue":[function(require,module,exports) {
+},{}],"components/carousel/Carousel.vue":[function(require,module,exports) {
 "use strict";
 
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      index: 0,
+      slides: []
+    };
+  },
+  computed: {
+    slidesCount: function slidesCount() {
+      return this.slides.length;
+    }
+  },
+  mounted: function mounted() {
+    this.slides = this.$children;
+    this.slides.forEach(function (slide, i) {
+      slide.index = i++;
+    });
+  },
+  methods: {
+    next: function next() {
+      this.index++;
+
+      if (this.index <= slidesCount) {
+        this.index = 0;
+      }
+    },
+    prev: function prev() {
+      this.index--;
+
+      if (this.index < 0) {
+        this.index = this.slidesCount - 1;
+      }
+    }
+  }
+};
+exports.default = _default;
+        var $e0efe6 = exports.default || module.exports;
+      
+      if (typeof $e0efe6 === 'function') {
+        $e0efe6 = $e0efe6.options;
+      }
+    
+        /* template */
+        Object.assign($e0efe6, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _vm._t("default"),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "button is-boxed",
+          on: {
+            click: function($event) {
+              $event.preventDefault()
+              return _vm.prev($event)
+            }
+          }
+        },
+        [_vm._v("Prev")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "button is-boxed",
+          on: {
+            click: function($event) {
+              $event.preventDefault()
+              return _vm.next($event)
+            }
+          }
+        },
+        [_vm._v("Next")]
+      )
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$e0efe6', $e0efe6);
+          } else {
+            api.reload('$e0efe6', $e0efe6);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/carousel/CarouselSlide.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      index: 0
+    };
+  },
+  computed: {
+    visible: function visible() {
+      return this.index === this.$parent.index;
+    }
+  }
+};
+exports.default = _default;
+        var $dbed36 = exports.default || module.exports;
+      
+      if (typeof $dbed36 === 'function') {
+        $dbed36 = $dbed36.options;
+      }
+    
+        /* template */
+        Object.assign($dbed36, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      directives: [
+        {
+          name: "show",
+          rawName: "v-show",
+          value: _vm.visible,
+          expression: "visible"
+        }
+      ]
+    },
+    [
+      _vm._v("\n    Index: " + _vm._s(_vm.index) + "\n    "),
+      _vm._v(" "),
+      _vm._t("default")
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$dbed36', $dbed36);
+          } else {
+            api.reload('$dbed36', $dbed36);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
   };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"components/app.vue":[function(require,module,exports) {
+"use strict";
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
 };
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var vue_1 = __importDefault(require("vue"));
-
-exports.default = vue_1.default.extend({
+exports.default = {
   data: function data() {
     return {
       bundler: "Sarah Guillaume",
       contact: "Contact"
     };
+  },
+  components: {
+    Carousel: function Carousel() {
+      return Promise.resolve().then(function () {
+        return __importStar(require("./carousel/Carousel.vue"));
+      });
+    },
+    CarouselSlide: function CarouselSlide() {
+      return Promise.resolve().then(function () {
+        return __importStar(require("./carousel/CarouselSlide.vue"));
+      });
+    }
   }
-});
+};
         var $df312a = exports.default || module.exports;
       
       if (typeof $df312a === 'function') {
@@ -8932,9 +9186,28 @@ exports.default = vue_1.default.extend({
         })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "column is-three-quarters" }, [
-        _c("h1", { staticClass: "is-size-4" }, [_vm._v(_vm._s(_vm.contact))])
-      ])
+      _c(
+        "div",
+        { staticClass: "column is-three-quarters" },
+        [
+          _c("h1", { staticClass: "is-size-4" }, [_vm._v(_vm._s(_vm.contact))]),
+          _vm._v(" "),
+          _c(
+            "carousel",
+            [
+              _c("CarouselSlide", [_vm._v("1")]),
+              _vm._v(" "),
+              _c("CarouselSlide", [_vm._v("2")]),
+              _vm._v(" "),
+              _c("CarouselSlide", [_vm._v("3")]),
+              _vm._v(" "),
+              _c("CarouselSlide", [_vm._v("4")])
+            ],
+            1
+          )
+        ],
+        1
+      )
     ])
   ])
 }
@@ -8971,7 +9244,7 @@ render._withStripped = true
       
       }
     })();
-},{"vue":"../node_modules/vue/dist/vue.runtime.esm.js","./../assets/IMG_20200520_145947.jpg":[["IMG_20200520_145947.8c23fea6.jpg","assets/IMG_20200520_145947.jpg"],"assets/IMG_20200520_145947.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js"}],"components/navapp.vue":[function(require,module,exports) {
+},{"./carousel/Carousel.vue":"components/carousel/Carousel.vue","./carousel/CarouselSlide.vue":"components/carousel/CarouselSlide.vue","./../assets/IMG_20200520_145947.jpg":[["IMG_20200520_145947.8c23fea6.jpg","assets/IMG_20200520_145947.jpg"],"assets/IMG_20200520_145947.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/navapp.vue":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -9167,7 +9440,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44607" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41655" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
