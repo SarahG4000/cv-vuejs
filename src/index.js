@@ -12,4 +12,5 @@ import "bulma";
 new Vue({render: createElement => createElement(App)}).$mount("#app");
 new Vue({render: createElement => createElement(Navapp)}).$mount("#navapp");
 
+
 // console.log("hello word:!!");

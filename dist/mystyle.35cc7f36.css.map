@@ -1,1 +1,1 @@
-{"version":3,"sources":["css/mystyle.css"],"names":[],"mappings":"AAAA","file":"mystyle.35cc7f36.css","sourceRoot":"../src","sourcesContent":[""]}
+{"version":3,"sources":["css/mystyle.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA","file":"mystyle.35cc7f36.css","sourceRoot":"../src","sourcesContent":[".sg-nav {\n    margin-right: 110px;\n    margin-left: 0%;\n}"]}

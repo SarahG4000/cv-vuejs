@@ -12,6 +12,23 @@
     right: 10px;
     left: auto;
 }
+
+.sg-float {
+    float: right;
+    margin-top: -64px;
+    margin-right: 10px;
+}
+.sg-left {
+    margin-left: -10px;
+}
+
+.sg-but {
+    margin-top: -40px;
+}
+
+button {
+    border-radius: 0% !important;
+}
 .container[data-v-df312a] {
   color: #b6c7c0;
   position: fixed;
@@ -29,7 +46,8 @@
 }
 .img[data-v-df312a] {
   height: auto;
-  max-width: 100%;
+  max-width: 60%;
+  margin-left: 19%;
 }
 .sg[data-v-df312a] {
   border-right: 2px solid;
@@ -41,10 +59,21 @@
   border-top: 2px solid #8d8d8c;
   border-left: 2px solid #8d8d8c;
   border-radius: 0;
-  box-shadow: 0 0.5em 1em -0.15em rgba(10, 10, 10, 0.4), 0 0px 0 2px rgba(10, 10, 10, 0.02);
+}
+.sg-padding[data-v-df312a] {
+  padding: 0 0 0 82px;
+}
+.sg-top[data-v-df312a] {
+  margin-top: 11px;
+}
+.sg-title[data-v-df312a] {
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 .box-carousel[data-v-df312a] {
-  background-color: rgba(85, 35, 45, 0.63);
+  border-color: #8d8d8c;
+  border: 1px solid;
+  color: #b4b0b0;
 }
 nav {
     position: relative;

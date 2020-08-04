@@ -1,48 +1,87 @@
 <template>
-    <div class="container is-mobile is-fullhd">
+    <div class="container is-mobile">
         <div class="box box-sg columns is-mobile is-one-quarter">
             <div class="box box-sg column">
                 <h1 class="sg is-size-3 is-family-primary">
-                    <!-- Sarah
-                    <br />Guillaume-->
+                    {{bundler}}
                     {{jobs}}
                 </h1>
                 <img class="img" src="../assets/IMG_20200520_145947.jpg" />
             </div>
             <div class="column is-three-quarters">
-                <h1 class="is-size-4">{{bundler}}</h1>
                 <carousel>
                     <CarouselSlide>
-                        <div class="box box-carousel">
-                            <h1>
-                                <span class="icon is-medium"></span><i class="fab fa-facebook-square"></i><i class="fab fa-facebook-messenger"></i></span>Contact me
-                            </h1>
-
-                            <p>
-                                <span class="icon is-medium"></span>Facebook
-                            </p>
-                            <p>
-                                <span class="icon is-medium"></span>Git
-                            </p>
-                            <p>
-                                <span class="icon is-medium"></span>Linkedin
-                            </p>
-                            <p>
-                                <span class="icon is-medium"></span>Email
-                            </p>
-                            <p>
-                                <span class="icon is-medium"></span>Discord
-                            </p>
+                        <div class="box box-sg">
+                            <h1 class="is-size-4 sg-title">Contact me</h1>
+                            <div class="columns">
+                                <div class="column sg-padding">
+                                    <span class="is-size-1 is-centered">
+                                        <i class="fab fa-facebook-square"></i>
+                                    </span>
+                                </div>
+                                <a
+                                    class="column is-two-thirds sg-top"
+                                >https://www.facebook.com/sarah.guillaume.140/</a>
+                            </div>
+                            <div class="columns">
+                                <div class="column sg-padding">
+                                    <span class="is-size-1">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                </div>
+                                <a class="column is-two-thirds sg-top">https://github.com/SarahG4000</a>
+                            </div>
+                            <div class="columns">
+                                <div class="column sg-padding">
+                                    <span class="is-size-1">
+                                        <i class="fab fa-linkedin"></i>
+                                    </span>
+                                </div>
+                                <a
+                                    class="column is-two-thirds sg-top"
+                                >https://www.linkedin.com/in/sarah-guillaume-06993219a/</a>
+                            </div>
+                            <div class="columns">
+                                <div class="column sg-padding">
+                                    <span class="is-size-1">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                </div>
+                                <a class="column is-two-thirds sg-top">sarah.guillaume4000@gmail.com</a>
+                            </div>
+                            <div class="columns">
+                                <div class="column sg-padding">
+                                    <span class="is-size-1">
+                                        <i class="fab fa-discord"></i>
+                                    </span>
+                                </div>
+                                <a class="column is-two-thirds sg-top">SarahG#4150</a>
+                            </div>
                         </div>
                     </CarouselSlide>
                     <CarouselSlide>
-                        <div class="box box-carousel"></div>
+                        <div class="box box-carousel">
+                            <div class="columns">
+                                <div class="column"></div>
+                                <div class="column"></div>
+                            </div>
+                        </div>
                     </CarouselSlide>
                     <CarouselSlide>
-                        <div class="box box-carousel"></div>
+                        <div class="box box-carousel">
+                            <div class="columns">
+                                <div class="column"></div>
+                                <div class="column"></div>
+                            </div>
+                        </div>
                     </CarouselSlide>
                     <CarouselSlide>
-                        <div class="box box-carousel"></div>
+                        <div class="box box-carousel">
+                            <div class="columns">
+                                <div class="column"></div>
+                                <div class="column"></div>
+                            </div>
+                        </div>
                     </CarouselSlide>
                 </carousel>
             </div>
@@ -87,7 +126,8 @@ export default {
 
 .img {
     height: auto;
-    max-width: 100%;
+    max-width: 60%;
+    margin-left: 19%;
 }
 .sg {
     border-right: 2px solid;
@@ -100,11 +140,24 @@ export default {
     border-top: 2px solid rgb(141, 141, 140);
     border-left: 2px solid rgb(141, 141, 140);
     border-radius: 0;
-    box-shadow: 0 0.5em 1em -0.15em rgba(10, 10, 10, 0.4),
-        0 0px 0 2px rgba(10, 10, 10, 0.02);
+}
+
+.sg-padding {
+    padding: 0 0 0 82px;
+}
+
+.sg-top {
+    margin-top: 11px;
+}
+
+.sg-title {
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
 
 .box-carousel {
-    background-color: rgba(85, 35, 45, 0.63);
+    border-color: rgb(141, 141, 140);
+    border: 1px solid;
+    color: rgb(180, 176, 176);
 }
 </style>

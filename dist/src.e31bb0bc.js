@@ -8899,6 +8899,14 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -8953,33 +8961,37 @@ exports.default = _default;
     [
       _vm._t("default"),
       _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "button is-boxed carousel__nav carousel__next",
-          on: {
-            click: function($event) {
-              $event.preventDefault()
-              return _vm.prev($event)
+      _c("div", [
+        _c(
+          "button",
+          {
+            staticClass:
+              "button is-boxed carousel__nav carousel__next column is-half sg-left",
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                return _vm.prev($event)
+              }
             }
-          }
-        },
-        [_vm._v("Prev")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "button is-boxed carousel__nav carousel__prev",
-          on: {
-            click: function($event) {
-              $event.preventDefault()
-              return _vm.next($event)
+          },
+          [_vm._v("Prev")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass:
+              "button is-boxed carousel__nav carousel__prev column is-half sg-float sg-but",
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                return _vm.next($event)
+              }
             }
-          }
-        },
-        [_vm._v("Next")]
-      )
+          },
+          [_vm._v("Next")]
+        )
+      ])
     ],
     2
   )
@@ -9069,11 +9081,7 @@ exports.default = _default;
         }
       ]
     },
-    [
-      _vm._v("\n    Index: " + _vm._s(_vm.index) + "\n    "),
-      _vm._v(" "),
-      _vm._t("default")
-    ],
+    [_vm._t("default")],
     2
   )
 }
@@ -9178,11 +9186,17 @@ exports.default = {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container is-mobile is-fullhd" }, [
+  return _c("div", { staticClass: "container is-mobile" }, [
     _c("div", { staticClass: "box box-sg columns is-mobile is-one-quarter" }, [
       _c("div", { staticClass: "box box-sg column" }, [
         _c("h1", { staticClass: "sg is-size-3 is-family-primary" }, [
-          _vm._v("\n                " + _vm._s(_vm.jobs) + "\n            ")
+          _vm._v(
+            "\n                " +
+              _vm._s(_vm.bundler) +
+              "\n                " +
+              _vm._s(_vm.jobs) +
+              "\n            "
+          )
         ]),
         _vm._v(" "),
         _c("img", {
@@ -9195,57 +9209,107 @@ exports.default = {
         "div",
         { staticClass: "column is-three-quarters" },
         [
-          _c("h1", { staticClass: "is-size-4" }, [_vm._v(_vm._s(_vm.bundler))]),
-          _vm._v(" "),
           _c(
             "carousel",
             [
               _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel" }, [
-                  _c("h1", [
-                    _c("span", { staticClass: "icon is-medium" }),
-                    _c("i", { staticClass: "fab fa-facebook-square" }),
-                    _c("i", { staticClass: "fab fa-facebook-messenger" }),
-                    _vm._v("Contact me\n                        ")
+                _c("div", { staticClass: "box box-sg" }, [
+                  _c("h1", { staticClass: "is-size-4 sg-title" }, [
+                    _vm._v("Contact me")
                   ]),
                   _vm._v(" "),
-                  _c("p", [
-                    _c("span", { staticClass: "icon is-medium" }),
-                    _vm._v("Facebook\n                        ")
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column sg-padding" }, [
+                      _c("span", { staticClass: "is-size-1 is-centered" }, [
+                        _c("i", { staticClass: "fab fa-facebook-square" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { staticClass: "column is-two-thirds sg-top" }, [
+                      _vm._v("https://www.facebook.com/sarah.guillaume.140/")
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c("p", [
-                    _c("span", { staticClass: "icon is-medium" }),
-                    _vm._v("Git\n                        ")
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column sg-padding" }, [
+                      _c("span", { staticClass: "is-size-1" }, [
+                        _c("i", { staticClass: "fab fa-github" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { staticClass: "column is-two-thirds sg-top" }, [
+                      _vm._v("https://github.com/SarahG4000")
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c("p", [
-                    _c("span", { staticClass: "icon is-medium" }),
-                    _vm._v("Linkedin\n                        ")
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column sg-padding" }, [
+                      _c("span", { staticClass: "is-size-1" }, [
+                        _c("i", { staticClass: "fab fa-linkedin" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { staticClass: "column is-two-thirds sg-top" }, [
+                      _vm._v(
+                        "https://www.linkedin.com/in/sarah-guillaume-06993219a/"
+                      )
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c("p", [
-                    _c("span", { staticClass: "icon is-medium" }),
-                    _vm._v("Email\n                        ")
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column sg-padding" }, [
+                      _c("span", { staticClass: "is-size-1" }, [
+                        _c("i", { staticClass: "fas fa-envelope" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { staticClass: "column is-two-thirds sg-top" }, [
+                      _vm._v("sarah.guillaume4000@gmail.com")
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c("p", [
-                    _c("span", { staticClass: "icon is-medium" }),
-                    _vm._v("Discord\n                        ")
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column sg-padding" }, [
+                      _c("span", { staticClass: "is-size-1" }, [
+                        _c("i", { staticClass: "fab fa-discord" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { staticClass: "column is-two-thirds sg-top" }, [
+                      _vm._v("SarahG#4150")
+                    ])
                   ])
                 ])
               ]),
               _vm._v(" "),
               _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel" })
+                _c("div", { staticClass: "box box-carousel" }, [
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" })
+                  ])
+                ])
               ]),
               _vm._v(" "),
               _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel" })
+                _c("div", { staticClass: "box box-carousel" }, [
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" })
+                  ])
+                ])
               ]),
               _vm._v(" "),
               _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel" })
+                _c("div", { staticClass: "box box-carousel" }, [
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column" }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" })
+                  ])
+                ])
               ])
             ],
             1
@@ -9329,49 +9393,57 @@ exports.default = vue_1.default.extend({
   return _c(
     "nav",
     {
-      staticClass: "navbar navbar-menu is-active is-dark",
-      attrs: { role: "navigation" }
+      staticClass: "navbar is-dark is-0-mobile",
+      attrs: { role: "navigation", "aria-label": "dropdown navigation" }
     },
     [
-      _c("div", { staticClass: "navbar-start" }, [
-        _c(
-          "a",
-          {
-            staticClass: "navbar-item",
-            attrs: { href: "/index.html" }
-          },
-          [_vm._v(_vm._s(_vm.home))]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "navbar-item",
-            attrs: { href: "/index.html" }
-          },
-          [_vm._v(_vm._s(_vm.formation))]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "navbar-item",
-            attrs: { href: "/index.html" }
-          },
-          [_vm._v(_vm._s(_vm.competence))]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "navbar-item",
-            attrs: { href: "/index.html" }
-          },
-          [_vm._v(_vm._s(_vm.experience))]
-        )
-      ]),
+      _vm._m(0),
       _vm._v(" "),
-      _vm._m(0)
+      _c("div", { staticClass: "navbar-menu" }, [
+        _c("div", { staticClass: "navbar-end" }, [
+          _c("div", { staticClass: "navbar-item has-dropdown is-hoverable" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "navbar-dropdown is-boxed" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "navbar-item is-hoverable",
+                  attrs: { href: "/index.html" }
+                },
+                [_vm._v(_vm._s(_vm.home))]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "navbar-item is-hoverable",
+                  attrs: { href: "/index.html" }
+                },
+                [_vm._v(_vm._s(_vm.formation))]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "navbar-item is-hoverable",
+                  attrs: { href: "/index.html" }
+                },
+                [_vm._v(_vm._s(_vm.competence))]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "navbar-item is-hoverable",
+                  attrs: { href: "/index.html" }
+                },
+                [_vm._v(_vm._s(_vm.experience))]
+              )
+            ])
+          ])
+        ])
+      ])
     ]
   )
 }
@@ -9380,13 +9452,23 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "navbar-end" }, [
-      _c("div", { staticClass: "navbar-item" }, [
-        _c("div", { staticClass: "field is-grouped" }, [
-          _c("p", { staticClass: "control" }),
-          _vm._v(" "),
-          _c("p", { staticClass: "control" })
+    return _c("div", { staticClass: "navbar-brand" }, [
+      _c("a", { staticClass: "navbar-item" }, [
+        _c("h1", { staticClass: "title has-text-white-ter" }, [
+          _c("span", [_c("i", { staticClass: "far fa-address-card" })])
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { staticClass: "navbar-link sg-nav" }, [
+      _c("span", { staticClass: "icon s-size-5" }, [
+        _c("i", {
+          staticClass: "fas fa-users has-text-white-ter sg-profilicon"
+        })
       ])
     ])
   }
@@ -9485,7 +9567,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41655" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37881" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

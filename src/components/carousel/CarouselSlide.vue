@@ -1,6 +1,6 @@
 <template>
     <div v-show="visible">
-        Index: {{ index }}
+        <!-- Index: {{ index }} -->
         <!-- visible ? {{visible}} -->
         <slot></slot>
     </div>

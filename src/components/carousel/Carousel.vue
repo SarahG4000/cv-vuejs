@@ -1,8 +1,16 @@
 <template>
     <div class="carousel">
         <slot></slot>
-        <button class="button is-boxed carousel__nav carousel__next" @click.prevent="prev">Prev</button>
-        <button class="button is-boxed carousel__nav carousel__prev" @click.prevent="next">Next</button>
+        <div>
+            <button
+                class="button is-boxed carousel__nav carousel__next column is-half sg-left"
+                @click.prevent="prev"
+            >Prev</button>
+            <button
+                class="button is-boxed carousel__nav carousel__prev column is-half sg-float sg-but"
+                @click.prevent="next"
+            >Next</button>
+        </div>
     </div>
 </template>
 
@@ -57,5 +65,22 @@ export default {
 .carousel.carousel__next {
     right: 10px;
     left: auto;
+}
+
+.sg-float {
+    float: right;
+    margin-top: -64px;
+    margin-right: 10px;
+}
+.sg-left {
+    margin-left: -10px;
+}
+
+.sg-but {
+    margin-top: -40px;
+}
+
+button {
+    border-radius: 0% !important;
 }
 </style>

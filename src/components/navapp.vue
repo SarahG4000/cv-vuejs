@@ -1,17 +1,28 @@
 <template>
-    <nav class="navbar navbar-menu is-active is-dark" role="navigation">
-        <div class="navbar-start">
-            <a class="navbar-item" href="../index.html">{{home}}</a>
-            <a class="navbar-item" href="../index.html">{{formation}}</a>
-            <a class="navbar-item" href="../index.html">{{competence}}</a>
-            <a class="navbar-item" href="../index.html">{{experience}}</a>
+    <nav role="navigation" aria-label="dropdown navigation" class="navbar is-dark is-0-mobile">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <h1 class="title has-text-white-ter">
+                    <span>
+                        <i class="far fa-address-card"></i>
+                    </span>
+                </h1>
+            </a>
         </div>
-
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="field is-grouped">
-                    <p class="control"></p>
-                    <p class="control"></p>
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link sg-nav">
+                        <span class="icon s-size-5">
+                            <i class="fas fa-users has-text-white-ter sg-profilicon" />
+                        </span>
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item is-hoverable" href="../index.html">{{home}}</a>
+                        <a class="navbar-item is-hoverable" href="../index.html">{{formation}}</a>
+                        <a class="navbar-item is-hoverable" href="../index.html">{{competence}}</a>
+                        <a class="navbar-item is-hoverable" href="../index.html">{{experience}}</a>
+                    </div>
                 </div>
             </div>
         </div>
