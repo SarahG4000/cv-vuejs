@@ -32,7 +32,7 @@ button {
 .container[data-v-df312a] {
   color: #b6c7c0;
   position: fixed;
-  top: 0;
+  top: 35px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -43,6 +43,10 @@ button {
   background: "rgba(0,0,0,0.5)";
   position: relative;
   z-index: 5;
+}
+nav[data-v-df312a] {
+  position: absolute;
+  z-index: 10;
 }
 .img[data-v-df312a] {
   height: auto;

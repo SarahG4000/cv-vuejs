@@ -9158,7 +9158,11 @@ exports.default = {
   data: function data() {
     return {
       bundler: "Sarah Guillaume",
-      jobs: "Web developer"
+      jobs: "Web developer",
+      home: "Contact me",
+      competence: "Compétences",
+      experience: "Expériences Professionnelles",
+      formation: "Formations"
     };
   },
   components: {
@@ -9187,8 +9191,8 @@ exports.default = {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container is-mobile" }, [
-    _c("div", { staticClass: "box box-sg columns is-mobile is-one-quarter" }, [
-      _c("div", { staticClass: "box box-sg column" }, [
+    _c("div", { staticClass: "box box-sg columns is-mobile" }, [
+      _c("div", { staticClass: "box box-sg column is-one-quarter" }, [
         _c("h1", { staticClass: "sg is-size-3 is-family-primary" }, [
           _vm._v(
             "\n                " +
@@ -9225,9 +9229,16 @@ exports.default = {
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("a", { staticClass: "column is-two-thirds sg-top" }, [
-                      _vm._v("https://www.facebook.com/sarah.guillaume.140/")
-                    ])
+                    _c(
+                      "a",
+                      {
+                        staticClass: "column is-two-thirds sg-top",
+                        attrs: {
+                          href: "https://www.facebook.com/sarah.guillaume.140/"
+                        }
+                      },
+                      [_vm._v("Facebook")]
+                    )
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "columns" }, [
@@ -9237,9 +9248,14 @@ exports.default = {
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("a", { staticClass: "column is-two-thirds sg-top" }, [
-                      _vm._v("https://github.com/SarahG4000")
-                    ])
+                    _c(
+                      "a",
+                      {
+                        staticClass: "column is-two-thirds sg-top",
+                        attrs: { href: "https://github.com/SarahG4000" }
+                      },
+                      [_vm._v("Sarah")]
+                    )
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "columns" }, [
@@ -9249,11 +9265,17 @@ exports.default = {
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("a", { staticClass: "column is-two-thirds sg-top" }, [
-                      _vm._v(
-                        "https://www.linkedin.com/in/sarah-guillaume-06993219a/"
-                      )
-                    ])
+                    _c(
+                      "a",
+                      {
+                        staticClass: "column is-two-thirds sg-top",
+                        attrs: {
+                          href:
+                            "https://www.linkedin.com/in/sarah-guillaume-06993219a/"
+                        }
+                      },
+                      [_vm._v("Linkedin")]
+                    )
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "columns" }, [
@@ -9285,9 +9307,50 @@ exports.default = {
               _c("CarouselSlide", [
                 _c("div", { staticClass: "box box-carousel" }, [
                   _c("div", { staticClass: "columns" }, [
-                    _c("div", { staticClass: "column" }),
+                    _c("div", { staticClass: "column" }, [
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(_vm.experience) +
+                          "\n                                "
+                      ),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("2015-2017 1 an et 6 mois")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("2014 6 mois")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("2013 2 mois")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("2011-2012 2 Étés")
+                      ])
+                    ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "column" })
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v(
+                          "\n                                    Employée : communal à Houffalize Ménage et\n                                    garderie\n                                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("Étudiante : commit de cuisine et plonge")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("Étudiante : Ménage")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v(
+                          "Étudiante : Accueil, animation, ménage et cafétéria"
+                        )
+                      ])
+                    ])
                   ])
                 ])
               ]),
@@ -9295,9 +9358,58 @@ exports.default = {
               _c("CarouselSlide", [
                 _c("div", { staticClass: "box box-carousel" }, [
                   _c("div", { staticClass: "columns" }, [
-                    _c("div", { staticClass: "column" }),
+                    _c("div", { staticClass: "column" }, [
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(_vm.formation) +
+                          "\n                                "
+                      ),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("Janvier 2020 a maintenant")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("2017-2019")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("2013-2015")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("2011-2013")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("2008-2011")
+                      ])
+                    ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "column" })
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("Formation Becode Liège")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("Ipeps à Seraing formation en web développement")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v(
+                          "Saint-Luc secondaire à Liège 5éme et 6éme infographie"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v(
+                          "ARBH Bastogne 4éme section science forte et 5éme section art"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "column" }, [
+                        _vm._v("ARBH Houffalize 1er, 2éme et 3éme général")
+                      ])
+                    ])
                   ])
                 ])
               ]),
@@ -9305,9 +9417,90 @@ exports.default = {
               _c("CarouselSlide", [
                 _c("div", { staticClass: "box box-carousel" }, [
                   _c("div", { staticClass: "columns" }, [
-                    _c("div", { staticClass: "column" }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "column" })
+                    _vm._v(
+                      "\n                            " +
+                        _vm._s(_vm.competence) +
+                        "\n                            "
+                    ),
+                    _c("div", { staticClass: "column" }, [
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-html5" }),
+                        _vm._v("HTML5\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-css3-alt" }),
+                        _vm._v("CSS3\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-bootstrap" }),
+                        _vm._v("Bootstrap\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("Bulma")]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("MySql")]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-php" }),
+                        _vm._v("Php\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("Ajax")]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("Phpmyadmin")]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-js" }),
+                        _vm._v("JavaScript\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("Babel")]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("Jquery")]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-wordpress" }),
+                        _vm._v("Wordpress\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-node" }),
+                        _vm._v("nodejs\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-react" }),
+                        _vm._v("Reactjs\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-git" }),
+                        _vm._v("Git\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-adobe" }),
+                        _vm._v("PhotoShop\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-adobe" }),
+                        _vm._v("Illustrator\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("i", { staticClass: "fab fa-adobe" }),
+                        _vm._v("Indesing\n                                ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _vm._v(
+                          "\n                                    Et une volontées d'apprendre\n                                    toujours plus de langages ou\n                                    programmes\n                                "
+                        )
+                      ])
+                    ])
                   ])
                 ])
               ])
@@ -9533,12 +9726,8 @@ new _vue.default({
   render: function render(createElement) {
     return createElement(_app.default);
   }
-}).$mount("#app");
-new _vue.default({
-  render: function render(createElement) {
-    return createElement(_navapp.default);
-  }
-}).$mount("#navapp"); // console.log("hello word:!!");
+}).$mount("#app"); // new Vue({render: createElement => createElement(Navapp)}).$mount("#navapp");
+// console.log("hello word:!!");
 },{"vue":"../node_modules/vue/dist/vue.runtime.esm.js","./components/app.vue":"components/app.vue","./components/navapp.vue":"components/navapp.vue","bulma":"../node_modules/bulma/bulma.sass"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -9567,7 +9756,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37881" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34075" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
