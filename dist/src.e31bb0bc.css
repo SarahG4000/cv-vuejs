@@ -59,10 +59,9 @@ nav[data-v-df312a] {
   margin-bottom: 1%;
   margin: 25px;
 }
-.box-sg[data-v-df312a] {
-  border-top: 2px solid #8d8d8c;
-  border-left: 2px solid #8d8d8c;
-  border-radius: 0;
+.sg-right[data-v-df312a] {
+  border-right: 2px solid;
+  margin: 25px;
 }
 .sg-padding[data-v-df312a] {
   padding: 0 0 0 82px;

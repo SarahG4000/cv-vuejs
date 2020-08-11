@@ -1,5 +1,5 @@
 <template>
-    <div class="container is-mobile">
+    <div class="container">
         <!-- <nav role="navigation" aria-label="dropdown navigation" class="navbar is-dark is-0-mobile">
             <div class="navbar-brand">
                 <a class="navbar-item">
@@ -28,106 +28,108 @@
                 </div>
             </div>
         </nav>-->
-        <div class="box box-sg columns is-mobile">
-            <div class="box box-sg column is-one-quarter">
-                <h1 class="sg is-size-3 is-family-primary">
-                    {{bundler}}
-                    {{jobs}}
-                </h1>
+        <div class="box box-carousel columns is-mobile">
+            <div class="box box-carousel column is-one-quarter">
+                <h1 class="sg-right title is-family-primary">{{bundler}}</h1>
+                <h2 class="sg subtitle is-family-primary">{{jobs}}</h2>
                 <img class="img" src="../assets/IMG_20200520_145947.jpg" />
             </div>
-            <div class="column is-three-quarters">
+
+            <div class="column">
                 <carousel>
                     <CarouselSlide>
-                        <div class="box box-sg">
-                            <h1 class="is-size-4 sg-title">Contact me</h1>
-                            <div class="columns">
-                                <div class="column sg-padding">
-                                    <span class="is-size-1 is-centered">
-                                        <i class="fab fa-facebook-square"></i>
-                                    </span>
-                                </div>
-                                <a
-                                    class="column is-two-thirds sg-top"
-                                    href="https://www.facebook.com/sarah.guillaume.140/"
-                                >Facebook</a>
-                            </div>
-                            <div class="columns">
-                                <div class="column sg-padding">
-                                    <span class="is-size-1">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                </div>
-                                <a
-                                    class="column is-two-thirds sg-top"
-                                    href="https://github.com/SarahG4000"
-                                >Sarah</a>
-                            </div>
-                            <div class="columns">
-                                <div class="column sg-padding">
-                                    <span class="is-size-1">
-                                        <i class="fab fa-linkedin"></i>
-                                    </span>
-                                </div>
-                                <a
-                                    class="column is-two-thirds sg-top"
-                                    href="https://www.linkedin.com/in/sarah-guillaume-06993219a/"
-                                >Linkedin</a>
-                            </div>
-                            <div class="columns">
-                                <div class="column sg-padding">
-                                    <span class="is-size-1">
-                                        <i class="fas fa-envelope"></i>
-                                    </span>
-                                </div>
-                                <a class="column is-two-thirds sg-top">sarah.guillaume4000@gmail.com</a>
-                            </div>
-                            <div class="columns">
-                                <div class="column sg-padding">
-                                    <span class="is-size-1">
-                                        <i class="fab fa-discord"></i>
-                                    </span>
-                                </div>
-                                <a class="column is-two-thirds sg-top">SarahG#4150</a>
-                            </div>
-                        </div>
-                    </CarouselSlide>
-                    <CarouselSlide>
                         <div class="box box-carousel">
+                            <h1 class="title">Contact me</h1>
                             <div class="columns">
                                 <div class="column">
-                                    {{experience}}
-                                    <div class="column">2015-2017 1 an et 6 mois</div>
-                                    <div class="column">2014 6 mois</div>
-                                    <div class="column">2013 2 mois</div>
-                                    <div class="column">2011-2012 2 Étés</div>
-                                </div>
-                                <div class="column">
-                                    <div class="column">
-                                        Employée : communal à Houffalize Ménage et
-                                        garderie
+                                    <div class="columns is-mobile">
+                                        <div class="column is-one-quarter sg-padding">
+                                            <span class="is-size-3">
+                                                <i class="fab fa-facebook-square"></i>
+                                            </span>
+                                        </div>
+                                        <a
+                                            class="column sg-top"
+                                            href="https://www.facebook.com/sarah.guillaume.140/"
+                                        >Facebook</a>
                                     </div>
-                                    <div class="column">Étudiante : commit de cuisine et plonge</div>
-                                    <div class="column">Étudiante : Ménage</div>
-                                    <div
-                                        class="column"
-                                    >Étudiante : Accueil, animation, ménage et cafétéria</div>
+                                    <div class="columns is-mobile">
+                                        <div class="column is-one-quarter sg-padding">
+                                            <span class="is-size-3">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                        </div>
+                                        <a
+                                            class="column sg-top"
+                                            href="https://github.com/SarahG4000"
+                                        >Sarah</a>
+                                    </div>
+                                    <div class="columns is-mobile">
+                                        <div class="column is-one-quarter sg-padding">
+                                            <span class="is-size-3">
+                                                <i class="fab fa-linkedin"></i>
+                                            </span>
+                                        </div>
+                                        <a
+                                            class="column sg-top"
+                                            href="https://www.linkedin.com/in/sarah-guillaume-06993219a/"
+                                        >Linkedin</a>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="columns is-mobile">
+                                        <div class="column is-one-quarter sg-padding">
+                                            <span class="is-size-3">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                        </div>
+                                        <p class="column sg-top">sarah.guillaume4000@gmail.com</p>
+                                    </div>
+                                    <div class="columns is-mobile">
+                                        <div class="column is-one-quarter sg-padding">
+                                            <span class="is-size-3">
+                                                <i class="fab fa-discord"></i>
+                                            </span>
+                                        </div>
+                                        <p class="column sg-top">SarahG#4150</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </CarouselSlide>
                     <CarouselSlide>
                         <div class="box box-carousel">
-                            <div class="columns">
-                                <div class="column">
-                                    {{formation}}
+                            <h1 class="title">{{experience}}</h1>
+                            <div class="columns is-mobile">
+                                <div class="column"></div>
+                                <div class="column"></div>
+                            </div>
+                            <p>2015-2017 1 an et 6 mois</p>
+                            <p>2014 6 mois</p>
+                            <p>2013 2 mois</p>
+                            <p>2011-2012 2 Étés</p>
+
+                            <p>
+                                Employée : communal à Houffalize Ménage et
+                                garderie
+                            </p>
+                            <p>Étudiante : commit de cuisine et plonge</p>
+                            <p>Étudiante : Ménage</p>
+                            <p>Étudiante : Accueil, animation, ménage et cafétéria</p>
+                        </div>
+                    </CarouselSlide>
+                    <CarouselSlide>
+                        <div class="box box-carousel">
+                            <div class>
+                                <div class="columns is-mobile">
+                                    <h class="title">{{formation}}</h>
                                     <div class="column">Janvier 2020 a maintenant</div>
                                     <div class="column">2017-2019</div>
                                     <div class="column">2013-2015</div>
                                     <div class="column">2011-2013</div>
                                     <div class="column">2008-2011</div>
                                 </div>
-                                <div class="column">
+                                <div class="columns is-mobile">
                                     <div class="column">Formation Becode Liège</div>
                                     <div
                                         class="column"
@@ -145,55 +147,51 @@
                     </CarouselSlide>
                     <CarouselSlide>
                         <div class="box box-carousel">
-                            <div class="columns">
-                                {{competence}}
-                                <div class="column">
-                                    <div>
-                                        <i class="fab fa-html5"></i>HTML5
+                            <div class>
+                                <h1 class="title">{{competence}}</h1>
+                                <div class="columns">
+                                    <div class="column">
+                                        <div>
+                                            <i class="fab fa-html5"></i>HTML5
+                                        </div>
+                                        <div>
+                                            <i class="fab fa-css3-alt"></i>CSS3
+                                        </div>
+                                        <div>
+                                            <i class="fab fa-wordpress"></i>Wordpress
+                                        </div>
+                                        <div>
+                                            <i class="fab fa-node"></i>nodejs
+                                        </div>
+                                        <div>
+                                            <i class="fab fa-react"></i>Reactjs
+                                        </div>
+                                        <div>
+                                            <i class="fab fa-git"></i>Git
+                                        </div>
+                                        <div>
+                                            <i class="fab fa-bootstrap"></i>Bootstrap
+                                        </div>
+
+                                        <div>
+                                            <i class="fab fa-php"></i>Php
+                                        </div>
+
+                                        <div>
+                                            <i class="fab fa-js"></i>JavaScript
+                                        </div>
                                     </div>
-                                    <div>
-                                        <i class="fab fa-css3-alt"></i>CSS3
-                                    </div>
-                                    <div>
-                                        <i class="fab fa-bootstrap"></i>Bootstrap
-                                    </div>
-                                    <div>Bulma</div>
-                                    <div>MySql</div>
-                                    <div>
-                                        <i class="fab fa-php"></i>Php
-                                    </div>
-                                    <div>Ajax</div>
-                                    <div>Phpmyadmin</div>
-                                    <div>
-                                        <i class="fab fa-js"></i>JavaScript
-                                    </div>
-                                    <div>Babel</div>
-                                    <div>Jquery</div>
-                                    <div>
-                                        <i class="fab fa-wordpress"></i>Wordpress
-                                    </div>
-                                    <div>
-                                        <i class="fab fa-node"></i>nodejs
-                                    </div>
-                                    <div>
-                                        <i class="fab fa-react"></i>Reactjs
-                                    </div>
-                                    <div>
-                                        <i class="fab fa-git"></i>Git
-                                    </div>
-                                    <div>
-                                        <i class="fab fa-adobe"></i>PhotoShop
-                                    </div>
-                                    <div>
-                                        <i class="fab fa-adobe"></i>Illustrator
-                                    </div>
-                                    <div>
-                                        <i class="fab fa-adobe"></i>Indesing
-                                    </div>
-                                    <div>
-                                        Et une volontées d'apprendre
-                                        toujours plus de langages ou
-                                        programmes
+                                    <div class="column">
+                                        <div>Babel</div>
+                                        <div>Jquery</div>
+                                        <div>Ajax</div>
+                                        <div>Phpmyadmin</div>
+                                        <div>Bulma</div>
+                                        <div>MySql</div>
+
+                                        <div>PhotoShop</div>
+                                        <div>Illustrator</div>
+                                        <div>Indesing</div>
                                     </div>
                                 </div>
                             </div>
@@ -260,11 +258,9 @@ nav {
     margin-bottom: 1%;
     margin: 25px;
 }
-
-.box-sg {
-    border-top: 2px solid rgb(141, 141, 140);
-    border-left: 2px solid rgb(141, 141, 140);
-    border-radius: 0;
+.sg-right {
+    border-right: 2px solid;
+    margin: 25px;
 }
 
 .sg-padding {
