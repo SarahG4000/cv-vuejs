@@ -8907,6 +8907,10 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -8957,7 +8961,7 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "carousel" },
+    { staticClass: "carousel sg-align" },
     [
       _vm._t("default"),
       _vm._v(" "),
@@ -8966,7 +8970,7 @@ exports.default = _default;
           "button",
           {
             staticClass:
-              "button is-boxed carousel__nav carousel__next column is-half sg-left",
+              "button is-boxed carousel carousel__nav carousel__next column sg-prev",
             on: {
               click: function($event) {
                 $event.preventDefault()
@@ -8974,14 +8978,14 @@ exports.default = _default;
               }
             }
           },
-          [_vm._v("Prev")]
+          [_c("i", { staticClass: "fas fa-angle-right size-sg" })]
         ),
         _vm._v(" "),
         _c(
           "button",
           {
             staticClass:
-              "button is-boxed carousel__nav carousel__prev column is-half sg-float sg-but",
+              "button is-boxed carousel carousel__nav carousel__prev column sg-next",
             on: {
               click: function($event) {
                 $event.preventDefault()
@@ -8989,7 +8993,7 @@ exports.default = _default;
               }
             }
           },
-          [_vm._v("Next")]
+          [_c("i", { staticClass: "fas fa-angle-left size-sg" })]
         )
       ])
     ],
@@ -9191,20 +9195,20 @@ exports.default = {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "box box-carousel columns is-mobile" }, [
+    _c("div", { staticClass: "columns is-mobile sg-cont" }, [
       _c("div", { staticClass: "box box-carousel column is-one-quarter" }, [
         _c("h1", { staticClass: "sg-right title is-family-primary" }, [
           _vm._v(_vm._s(_vm.bundler))
         ]),
         _vm._v(" "),
-        _c("h2", { staticClass: "sg subtitle is-family-primary" }, [
-          _vm._v(_vm._s(_vm.jobs))
-        ]),
-        _vm._v(" "),
         _c("img", {
           staticClass: "img",
           attrs: { src: "/IMG_20200520_145947.8c23fea6.jpg" }
-        })
+        }),
+        _vm._v(" "),
+        _c("h2", { staticClass: "sg title is-family-primary" }, [
+          _vm._v(_vm._s(_vm.jobs))
+        ])
       ]),
       _vm._v(" "),
       _c(
@@ -9215,7 +9219,7 @@ exports.default = {
             "carousel",
             [
               _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel" }, [
+                _c("div", { staticClass: "box box-carousel sg-box" }, [
                   _c("h1", { staticClass: "title" }, [_vm._v("Contact me")]),
                   _vm._v(" "),
                   _c("div", { staticClass: "columns" }, [
@@ -9287,10 +9291,8 @@ exports.default = {
                           },
                           [_vm._v("Linkedin")]
                         )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "column" }, [
+                      ]),
+                      _vm._v(" "),
                       _c("div", { staticClass: "columns is-mobile" }, [
                         _c(
                           "div",
@@ -9322,13 +9324,132 @@ exports.default = {
                           _vm._v("SarahG#4150")
                         ])
                       ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column" }, [
+                      _c(
+                        "form",
+                        {
+                          attrs: {
+                            method: "",
+                            action: "javascript:sendMail()",
+                            name: "envoi",
+                            enctype: "text/plain"
+                          }
+                        },
+                        [
+                          _c("div", { staticClass: "field" }, [
+                            _c("label", { staticClass: "label" }, [
+                              _vm._v("Name")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "control has-icons-left has-icons-right"
+                              },
+                              [
+                                _c("input", {
+                                  staticClass: "input",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Text input",
+                                    value: "Name"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "icon is-small is-left" },
+                                  [_c("i", { staticClass: "fas fa-user" })]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "field" }, [
+                            _c("label", { staticClass: "label" }, [
+                              _vm._v("Email")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "control has-icons-left has-icons-right"
+                              },
+                              [
+                                _c("input", {
+                                  staticClass: "input",
+                                  attrs: {
+                                    type: "email",
+                                    placeholder: "Email input",
+                                    value: "mail@"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "icon is-small is-left" },
+                                  [_c("i", { staticClass: "fas fa-envelope" })]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "field" }, [
+                            _c("label", { staticClass: "label" }, [
+                              _vm._v("Subject")
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "control" }, [
+                              _c("div", { staticClass: "select" }, [
+                                _c("select", [
+                                  _c("option", [_vm._v("Select")]),
+                                  _vm._v(" "),
+                                  _c("option", [_vm._v("Recrutement")]),
+                                  _vm._v(" "),
+                                  _c("option", [_vm._v("Projet")])
+                                ])
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "field" }, [
+                            _c("label", { staticClass: "label" }, [
+                              _vm._v("Message")
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "control" }, [
+                              _c("textarea", {
+                                staticClass: "textarea",
+                                attrs: { placeholder: "Textarea" }
+                              })
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "field is-grouped" }, [
+                            _c("div", { staticClass: "control" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "button is-link",
+                                  attrs: { type: "submit", value: "Envoyer" }
+                                },
+                                [_vm._v("Submit")]
+                              )
+                            ])
+                          ])
+                        ]
+                      )
                     ])
                   ])
                 ])
               ]),
               _vm._v(" "),
               _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel" }, [
+                _c("div", { staticClass: "box box-carousel sg-box" }, [
                   _c("h1", { staticClass: "title" }, [
                     _vm._v(_vm._s(_vm.experience))
                   ]),
@@ -9366,7 +9487,7 @@ exports.default = {
               ]),
               _vm._v(" "),
               _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel" }, [
+                _c("div", { staticClass: "box box-carousel sg-box" }, [
                   _c("div", {}, [
                     _c(
                       "div",
@@ -9429,7 +9550,7 @@ exports.default = {
               ]),
               _vm._v(" "),
               _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel" }, [
+                _c("div", { staticClass: "box box-carousel sg-box" }, [
                   _c("div", {}, [
                     _c("h1", { staticClass: "title" }, [
                       _vm._v(_vm._s(_vm.competence))
@@ -9766,7 +9887,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44023" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43969" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

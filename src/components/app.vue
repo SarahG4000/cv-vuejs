@@ -28,17 +28,17 @@
                 </div>
             </div>
         </nav>-->
-        <div class="box box-carousel columns is-mobile">
+        <div class="columns is-mobile sg-cont">
             <div class="box box-carousel column is-one-quarter">
                 <h1 class="sg-right title is-family-primary">{{bundler}}</h1>
-                <h2 class="sg subtitle is-family-primary">{{jobs}}</h2>
                 <img class="img" src="../assets/IMG_20200520_145947.jpg" />
+                <h2 class="sg title is-family-primary">{{jobs}}</h2>
             </div>
 
             <div class="column">
                 <carousel>
                     <CarouselSlide>
-                        <div class="box box-carousel">
+                        <div class="box box-carousel sg-box">
                             <h1 class="title">Contact me</h1>
                             <div class="columns">
                                 <div class="column">
@@ -75,8 +75,6 @@
                                             href="https://www.linkedin.com/in/sarah-guillaume-06993219a/"
                                         >Linkedin</a>
                                     </div>
-                                </div>
-                                <div class="column">
                                     <div class="columns is-mobile">
                                         <div class="column is-one-quarter sg-padding">
                                             <span class="is-size-3">
@@ -94,11 +92,79 @@
                                         <p class="column sg-top">SarahG#4150</p>
                                     </div>
                                 </div>
+                                <div class="column">
+                                    <form
+                                        method
+                                        action="javascript:sendMail()"
+                                        name="envoi"
+                                        enctype="text/plain"
+                                    >
+                                        <div class="field">
+                                            <label class="label">Name</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                <input
+                                                    class="input"
+                                                    type="text"
+                                                    placeholder="Text input"
+                                                    value="Name"
+                                                />
+                                                <span class="icon is-small is-left">
+                                                    <i class="fas fa-user"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="field">
+                                            <label class="label">Email</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                <input
+                                                    class="input"
+                                                    type="email"
+                                                    placeholder="Email input"
+                                                    value="mail@"
+                                                />
+                                                <span class="icon is-small is-left">
+                                                    <i class="fas fa-envelope"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="field">
+                                            <label class="label">Subject</label>
+                                            <div class="control">
+                                                <div class="select">
+                                                    <select>
+                                                        <option>Select</option>
+                                                        <option>Recrutement</option>
+                                                        <option>Projet</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="field">
+                                            <label class="label">Message</label>
+                                            <div class="control">
+                                                <textarea class="textarea" placeholder="Textarea"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="field is-grouped">
+                                            <div class="control">
+                                                <button
+                                                    class="button is-link"
+                                                    type="submit"
+                                                    value="Envoyer"
+                                                >Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </CarouselSlide>
                     <CarouselSlide>
-                        <div class="box box-carousel">
+                        <div class="box box-carousel sg-box">
                             <h1 class="title">{{experience}}</h1>
                             <div class="columns is-mobile">
                                 <div class="column"></div>
@@ -119,7 +185,7 @@
                         </div>
                     </CarouselSlide>
                     <CarouselSlide>
-                        <div class="box box-carousel">
+                        <div class="box box-carousel sg-box">
                             <div class>
                                 <div class="columns is-mobile">
                                     <h class="title">{{formation}}</h>
@@ -146,7 +212,7 @@
                         </div>
                     </CarouselSlide>
                     <CarouselSlide>
-                        <div class="box box-carousel">
+                        <div class="box box-carousel sg-box">
                             <div class>
                                 <h1 class="title">{{competence}}</h1>
                                 <div class="columns">
@@ -226,7 +292,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-    color: rgb(182, 199, 192);
+    color: #434343 !important;
     // background: darkblue;
     position: fixed;
     top: 35px;
@@ -241,10 +307,22 @@ export default {
     position: relative;
     z-index: 5;
 }
+a {
+    color: #8d1414;
+}
+
+.sg-cont {
+    background: #646363 !important;
+    color: white !important;
+}
 
 nav {
     position: absolute;
     z-index: 10;
+}
+
+form {
+    margin-top: -80px;
 }
 
 .img {
@@ -253,9 +331,7 @@ nav {
     margin-left: 19%;
 }
 .sg {
-    border-right: 2px solid;
-    border-bottom: 2px solid;
-    margin-bottom: 1%;
+    border-left: 2px solid;
     margin: 25px;
 }
 .sg-right {
@@ -274,11 +350,21 @@ nav {
 .sg-title {
     margin-top: -10px;
     margin-bottom: 10px;
+    color: #646363 !important;
+}
+
+.sg-box {
+    height: 475px;
+}
+
+.box {
+    background-color: rgb(223, 219, 219) !important;
+    color: #646363 !important;
 }
 
 .box-carousel {
     border-color: rgb(141, 141, 140);
     border: 1px solid;
-    color: rgb(180, 176, 176);
+    color: #646363 !important;
 }
 </style>

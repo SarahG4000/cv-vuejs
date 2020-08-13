@@ -1,15 +1,19 @@
 <template>
-    <div class="carousel">
+    <div class="carousel sg-align">
         <slot></slot>
         <div>
             <button
-                class="button is-boxed carousel__nav carousel__next column is-half sg-left"
+                class="button is-boxed carousel carousel__nav carousel__next column sg-prev"
                 @click.prevent="prev"
-            >Prev</button>
+            >
+                <i class="fas fa-angle-right size-sg"></i>
+            </button>
             <button
-                class="button is-boxed carousel__nav carousel__prev column is-half sg-float sg-but"
+                class="button is-boxed carousel carousel__nav carousel__prev column sg-next"
                 @click.prevent="next"
-            >Next</button>
+            >
+                <i class="fas fa-angle-left size-sg"></i>
+            </button>
         </div>
     </div>
 </template>
@@ -57,7 +61,7 @@ export default {
 }
 
 .carousel__nav {
-    position: absolute;
+    position: absolute !important;
     margin-top: -31px;
     top: 50px;
     left: 10px;
@@ -67,20 +71,32 @@ export default {
     left: auto;
 }
 
-.sg-float {
-    float: right;
-    margin-top: -64px;
-    margin-right: 10px;
-}
-.sg-left {
-    margin-left: -10px;
-}
-
-.sg-but {
-    margin-top: -40px;
-}
-
 button {
-    border-radius: 0% !important;
+    background: #646363 !important;
+    color: white !important;
+    font-size: 35px;
+}
+
+.sg-next {
+    float: left;
+    margin-left: -422px;
+    height: 531px !important;
+    margin-top: -69px;
+    border: none !important;
+}
+
+.sg-prev {
+    height: 531px !important;
+    margin-right: -68px;
+    margin-top: -69px;
+    border: none !important;
+}
+
+.size-sg {
+    font-size: 70px;
+}
+
+.sg-align {
+    top: -12px;
 }
 </style>
