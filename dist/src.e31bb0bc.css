@@ -59,9 +59,14 @@ button {
 a[data-v-df312a] {
   color: #8d1414;
 }
+.sg-grand[data-v-df312a] {
+  font-size: 18px;
+}
+.margin-sg[data-v-df312a] {
+  margin-left: 105px;
+}
 .sg-cont[data-v-df312a] {
   background: #646363 !important;
-  color: white !important;
 }
 nav[data-v-df312a] {
   position: absolute;
@@ -86,9 +91,6 @@ form[data-v-df312a] {
 .sg-padding[data-v-df312a] {
   padding: 0 0 0 82px;
 }
-.sg-top[data-v-df312a] {
-  margin-top: 11px;
-}
 .sg-title[data-v-df312a] {
   margin-top: -10px;
   margin-bottom: 10px;
@@ -105,6 +107,35 @@ form[data-v-df312a] {
   border-color: #8d8d8c;
   border: 1px solid;
   color: #646363 !important;
+}
+.sg-dateforma[data-v-df312a] {
+  margin-top: 50px;
+  font-size: 20px;
+}
+.sg-forma[data-v-df312a] {
+  font-size: 22px;
+  color: #646363;
+}
+.sg-floatr[data-v-df312a] {
+  float: right;
+}
+.sg-bottom[data-v-df312a] {
+  margin-bottom: 15px;
+}
+.sg-paddingforma[data-v-df312a] {
+  padding-top: 6px;
+}
+.sg-paddingforma2[data-v-df312a] {
+  padding-top: 3px;
+}
+span[data-v-df312a] {
+  color: #8d1414;
+}
+.button[data-v-df312a]:active,
+.button[data-v-df312a]:hover,
+.butto.is-hovered[data-v-df312a],
+.button.is-active[data-v-df312a] {
+  border: none;
 }
 nav {
     position: relative;
