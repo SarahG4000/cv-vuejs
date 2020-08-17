@@ -3,16 +3,16 @@
         <slot></slot>
         <div>
             <button
-                class="button is-boxed carousel carousel__nav carousel__next column sg-prev"
+                class="button is-boxed carousel carousel__nav carousel__prev column sg-prev"
                 @click.prevent="prev"
             >
-                <i class="fas fa-angle-right size-sg"></i>
+                <i class="fas fa-angle-left size-sg"></i>
             </button>
             <button
-                class="button is-boxed carousel carousel__nav carousel__prev column sg-next"
+                class="button is-boxed carousel carousel__nav carousel__next column sg-next"
                 @click.prevent="next"
             >
-                <i class="fas fa-angle-left size-sg"></i>
+                <i class="fas fa-angle-right size-sg"></i>
             </button>
         </div>
     </div>
@@ -78,18 +78,21 @@ button {
 }
 
 .sg-next {
-    float: left;
-    margin-left: -422px;
-    height: 531px !important;
-    margin-top: -69px;
-    border: none !important;
+    float: right;
+    margin-right: -64px;
+    height: 473.5px !important;
+    margin-top: -49px;
+    border: #dfdbdb solid 1px !important;
+    border-radius: 0 !important;
 }
 
 .sg-prev {
-    height: 531px !important;
-    margin-right: -68px;
-    margin-top: -69px;
-    border: none !important;
+    float: left;
+    height: 473.5px !important;
+    margin-left: -67px;
+    margin-top: -49px;
+    border: #dfdbdb solid 1px !important;
+    border-radius: 0 !important;
 }
 
 .size-sg {

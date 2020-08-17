@@ -1,9 +1,11 @@
 <template>
-    <div v-show="visible">
-        <!-- Index: {{ index }} -->
-        <!-- visible ? {{visible}} -->
-        <slot></slot>
-    </div>
+    <transition name="slide">
+        <div v-show="visible">
+            <!-- Index: {{ index }} -->
+            <!-- visible ? {{visible}} -->
+            <slot></slot>
+        </div>
+    </transition>
 </template>
 
 <script>
@@ -20,3 +22,34 @@ export default {
     },
 };
 </script>
+
+<style>
+.slide-enter-active {
+    animation: flipInX 3s;
+}
+
+.slide-leave-active {
+    animation: flipOutX 1s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+/* @keyframes bounceInDown {
+    from {
+        transform: translateY(200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceOutDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-200%);
+    }
+} */
+</style>

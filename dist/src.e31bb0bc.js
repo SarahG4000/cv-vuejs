@@ -8970,7 +8970,7 @@ exports.default = _default;
           "button",
           {
             staticClass:
-              "button is-boxed carousel carousel__nav carousel__next column sg-prev",
+              "button is-boxed carousel carousel__nav carousel__prev column sg-prev",
             on: {
               click: function($event) {
                 $event.preventDefault()
@@ -8978,14 +8978,14 @@ exports.default = _default;
               }
             }
           },
-          [_c("i", { staticClass: "fas fa-angle-right size-sg" })]
+          [_c("i", { staticClass: "fas fa-angle-left size-sg" })]
         ),
         _vm._v(" "),
         _c(
           "button",
           {
             staticClass:
-              "button is-boxed carousel carousel__nav carousel__prev column sg-next",
+              "button is-boxed carousel carousel__nav carousel__next column sg-next",
             on: {
               click: function($event) {
                 $event.preventDefault()
@@ -8993,7 +8993,7 @@ exports.default = _default;
               }
             }
           },
-          [_c("i", { staticClass: "fas fa-angle-left size-sg" })]
+          [_c("i", { staticClass: "fas fa-angle-right size-sg" })]
         )
       ])
     ],
@@ -9048,6 +9048,8 @@ exports.default = void 0;
 //
 //
 //
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -9073,21 +9075,23 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      directives: [
-        {
-          name: "show",
-          rawName: "v-show",
-          value: _vm.visible,
-          expression: "visible"
-        }
-      ]
-    },
-    [_vm._t("default")],
-    2
-  )
+  return _c("transition", { attrs: { name: "slide" } }, [
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.visible,
+            expression: "visible"
+          }
+        ]
+      },
+      [_vm._t("default")],
+      2
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -9116,9 +9120,13 @@ render._withStripped = true
         }
 
         
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/app.vue":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/app.vue":[function(require,module,exports) {
 "use strict";
 
 var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
@@ -9196,20 +9204,24 @@ exports.default = {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "columns is-mobile sg-cont" }, [
-      _c("div", { staticClass: "box box-carousel column is-one-quarter" }, [
-        _c("h1", { staticClass: "sg-right title is-family-primary" }, [
-          _vm._v(_vm._s(_vm.bundler))
-        ]),
-        _vm._v(" "),
-        _c("img", {
-          staticClass: "img",
-          attrs: { src: "/IMG_20200520_145947.8c23fea6.jpg" }
-        }),
-        _vm._v(" "),
-        _c("h2", { staticClass: "sg title is-family-primary" }, [
-          _vm._v(_vm._s(_vm.jobs))
-        ])
-      ]),
+      _c(
+        "div",
+        { staticClass: "box box-carousel column is-one-quarter sg-40px" },
+        [
+          _c("h1", { staticClass: "sg-right title is-family-primary" }, [
+            _vm._v(_vm._s(_vm.bundler))
+          ]),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "img",
+            attrs: { src: "/IMG_20200520_145947.8c23fea6.jpg" }
+          }),
+          _vm._v(" "),
+          _c("h2", { staticClass: "sg title is-family-primary padding-sg" }, [
+            _vm._v(_vm._s(_vm.jobs))
+          ])
+        ]
+      ),
       _vm._v(" "),
       _c(
         "div",
@@ -9220,7 +9232,331 @@ exports.default = {
             [
               _c("CarouselSlide", [
                 _c("div", { staticClass: "box box-carousel sg-box" }, [
-                  _c("h1", { staticClass: "title" }, [_vm._v("Contact me")]),
+                  _c("div", {}, [
+                    _c("h1", { staticClass: "title sg padding-sg" }, [
+                      _vm._v(_vm._s(_vm.competence))
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "columns" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "column is-one-quarter margin-sg sg-grand"
+                        },
+                        [
+                          _c("div", { staticClass: "level-right" }, [
+                            _vm._v("Bootstrap")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-left" }, [
+                            _c("div", { staticClass: "i-sg" }, [
+                              _c("span", [
+                                _c("i", { staticClass: "fab fa-css3-alt" })
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("CSS3")])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-right" }, [
+                            _c("div", { staticClass: "i-sg" }, [
+                              _c("span", [
+                                _c("i", { staticClass: "fab fa-git" })
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Git")])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-left" }, [
+                            _c("div", { staticClass: "i-sg" }, [
+                              _c("span", [
+                                _c("i", { staticClass: "fab fa-html5" })
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("HTML5")])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-right" }, [
+                            _c("div", { staticClass: "i-sg" }, [
+                              _c("span", [
+                                _c("i", { staticClass: "fab fa-js" })
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("JavaScript")])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-left" }, [
+                            _c("div", { staticClass: "i-sg" }, [
+                              _c("span", [
+                                _c("i", { staticClass: "fab fa-node" })
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("nodejs")])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-right" }, [
+                            _c("div", { staticClass: "i-sg" }, [
+                              _c("span", [
+                                _c("i", { staticClass: "fab fa-react" })
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Reactjs")])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-left" }, [
+                            _c("div", { staticClass: "i-sg" }, [
+                              _c("span", [
+                                _c("i", { staticClass: "fab fa-php" })
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Php")])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-right" }, [
+                            _c("div", { staticClass: "i-sg" }, [
+                              _c("span", [
+                                _c("i", { staticClass: "fab fa-wordpress" })
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Wordpress")])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", {
+                        staticClass: "column is-one-quarter sg-grand"
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "column is-one-quarter sg-grand" },
+                        [
+                          _c("div", { staticClass: "level-left" }, [
+                            _vm._v("Ajax")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-right" }, [
+                            _vm._v("Babel")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-left" }, [
+                            _vm._v("Bulma")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-right" }, [
+                            _vm._v("Jquery")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-left" }, [
+                            _vm._v("MySql")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-right" }, [
+                            _vm._v("PhotoShop")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-left" }, [
+                            _vm._v("Phpmyadmin")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-right" }, [
+                            _vm._v("Illustrator")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "level-left" }, [
+                            _vm._v("Indesing")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("CarouselSlide", [
+                _c("div", { staticClass: "box box-carousel sg-box" }, [
+                  _c("div", [
+                    _c("h1", { staticClass: "title sg-right sg-min" }, [
+                      _vm._v(_vm._s(_vm.formation))
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "columns is-mobile sg-dateforma" },
+                      [
+                        _c("div", { staticClass: "column" }, [
+                          _c("div", { staticClass: "sg-bottom" }, [
+                            _vm._v("Janvier 2020 a maintenant")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "sg-bottom sg-paddingforma" },
+                            [_vm._v("2017-2019")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "sg-bottom" }, [
+                            _vm._v("2013-2015")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "sg-bottom sg-paddingforma2" },
+                            [_vm._v("2011-2013")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "sg-bottom sg-paddingforma2" },
+                            [_vm._v("2008-2011")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "column sg-floatr sg-forma is-two-thirds"
+                          },
+                          [
+                            _c("div", { staticClass: "sg-bottom" }, [
+                              _c("span", [
+                                _vm._v(
+                                  "\n                                            Formation\n                                            Becode\n                                        "
+                                )
+                              ]),
+                              _vm._v(
+                                " Liège\n                                    "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "sg-bottom" }, [
+                              _vm._v(
+                                "\n                                        Ipeps à Seraing formation en\n                                        "
+                              ),
+                              _c("span", [_vm._v("web développement")])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "sg-bottom" }, [
+                              _vm._v(
+                                "\n                                        Saint-Luc secondaire à Liège 5éme et 6éme\n                                        "
+                              ),
+                              _c("span", [_vm._v("infographie")])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "sg-bottom" }, [
+                              _vm._v(
+                                "\n                                        ARBH Bastogne 4éme section science forte et 5éme\n                                        "
+                              ),
+                              _c("span", [_vm._v("section art")])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "sg-bottom" }, [
+                              _vm._v(
+                                "\n                                        ARBH Houffalize\n                                        "
+                              ),
+                              _c("span", [_vm._v("1er, 2éme et 3éme général")])
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("CarouselSlide", [
+                _c("div", { staticClass: "box box-carousel sg-box" }, [
+                  _c("h1", { staticClass: "title sg padding-sg" }, [
+                    _vm._v(_vm._s(_vm.experience))
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns is-mobile" }, [
+                    _c(
+                      "div",
+                      { staticClass: "column sg-dateforma is-mobile" },
+                      [
+                        _c("div", { staticClass: "sg-bottom" }, [
+                          _vm._v("2015-2017 1 an et 6 mois")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sg-bottom" }, [
+                          _vm._v("2014 6 mois")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "sg-bottom sg-paddingforma2" },
+                          [_vm._v("2013 2 mois")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "sg-bottom sg-paddingforma" },
+                          [_vm._v("2011-2012 2 Étés")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "column sg-floatr sg-dateforma sg-forma is-two-thirds"
+                      },
+                      [
+                        _c("div", { staticClass: "sg-bottom" }, [
+                          _vm._v(
+                            "\n                                    Employée :\n                                    "
+                          ),
+                          _c("span", [
+                            _vm._v(
+                              "\n                                        communal à Houffalize Ménage et\n                                        garderie\n                                    "
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sg-bottom" }, [
+                          _vm._v(
+                            "\n                                    Étudiante :\n                                    "
+                          ),
+                          _c("span", [_vm._v("commit de cuisine et plonge")])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sg-bottom" }, [
+                          _vm._v(
+                            "\n                                    Étudiante :\n                                    "
+                          ),
+                          _c("span", [_vm._v("Ménage")])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "sg-bottom" }, [
+                          _vm._v(
+                            "\n                                    Étudiante :\n                                    "
+                          ),
+                          _c("span", [
+                            _vm._v("Accueil, animation, ménage et cafétéria")
+                          ])
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("CarouselSlide", [
+                _c("div", { staticClass: "box box-carousel sg-box" }, [
+                  _c("h1", { staticClass: "title sg-right sg-min" }, [
+                    _vm._v("Contact me")
+                  ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "columns" }, [
                     _c("div", { staticClass: "column" }, [
@@ -9422,24 +9758,6 @@ exports.default = {
                           _vm._v(" "),
                           _c("div", { staticClass: "field" }, [
                             _c("label", { staticClass: "label" }, [
-                              _vm._v("Subject")
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "control" }, [
-                              _c("div", { staticClass: "select" }, [
-                                _c("select", [
-                                  _c("option", [_vm._v("Select")]),
-                                  _vm._v(" "),
-                                  _c("option", [_vm._v("Recrutement")]),
-                                  _vm._v(" "),
-                                  _c("option", [_vm._v("Projet")])
-                                ])
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "field" }, [
-                            _c("label", { staticClass: "label" }, [
                               _vm._v("Message")
                             ]),
                             _vm._v(" "),
@@ -9462,320 +9780,6 @@ exports.default = {
                                 [_vm._v("Submit")]
                               )
                             ])
-                          ])
-                        ]
-                      )
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel sg-box" }, [
-                  _c("h1", { staticClass: "title" }, [
-                    _vm._v(_vm._s(_vm.experience))
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "columns is-mobile" }, [
-                    _c(
-                      "div",
-                      { staticClass: "column sg-dateforma is-mobile" },
-                      [
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v("2015-2017 1 an et 6 mois")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v("2014 6 mois")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "sg-bottom sg-paddingforma2" },
-                          [_vm._v("2013 2 mois")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "sg-bottom sg-paddingforma" },
-                          [_vm._v("2011-2012 2 Étés")]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "column sg-floatr sg-dateforma sg-forma is-two-thirds"
-                      },
-                      [
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v(
-                            "\n                                    Employée :\n                                    "
-                          ),
-                          _c("span", [
-                            _vm._v(
-                              "\n                                        communal à Houffalize Ménage et\n                                        garderie\n                                    "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v(
-                            "\n                                    Étudiante :\n                                    "
-                          ),
-                          _c("span", [_vm._v("commit de cuisine et plonge")])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v(
-                            "\n                                    Étudiante :\n                                    "
-                          ),
-                          _c("span", [_vm._v("Ménage")])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v(
-                            "\n                                    Étudiante :\n                                    "
-                          ),
-                          _c("span", [
-                            _vm._v("Accueil, animation, ménage et cafétéria")
-                          ])
-                        ])
-                      ]
-                    )
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel sg-box" }, [
-                  _c(
-                    "div",
-                    [
-                      _c("h", { staticClass: "title" }, [
-                        _vm._v(_vm._s(_vm.formation))
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "columns is-mobile sg-dateforma" },
-                        [
-                          _c("div", { staticClass: "column" }, [
-                            _c("div", { staticClass: "sg-bottom" }, [
-                              _vm._v("Janvier 2020 a maintenant")
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "sg-bottom sg-paddingforma" },
-                              [_vm._v("2017-2019")]
-                            ),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "sg-bottom" }, [
-                              _vm._v("2013-2015")
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "sg-bottom sg-paddingforma2" },
-                              [_vm._v("2011-2013")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "sg-bottom sg-paddingforma2" },
-                              [_vm._v("2008-2011")]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "column sg-floatr sg-forma is-two-thirds"
-                            },
-                            [
-                              _c("div", { staticClass: "sg-bottom" }, [
-                                _c("span", [
-                                  _vm._v(
-                                    "\n                                            Formation\n                                            Becode\n                                        "
-                                  )
-                                ]),
-                                _vm._v(
-                                  " Liège\n                                    "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "sg-bottom" }, [
-                                _vm._v(
-                                  "\n                                        Ipeps à Seraing formation en\n                                        "
-                                ),
-                                _c("span", [_vm._v("web développement")])
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "sg-bottom" }, [
-                                _vm._v(
-                                  "\n                                        Saint-Luc secondaire à Liège 5éme et 6éme\n                                        "
-                                ),
-                                _c("span", [_vm._v("infographie")])
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "sg-bottom" }, [
-                                _vm._v(
-                                  "\n                                        ARBH Bastogne 4éme section science forte et 5éme\n                                        "
-                                ),
-                                _c("span", [_vm._v("section art")])
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "sg-bottom" }, [
-                                _vm._v(
-                                  "\n                                        ARBH Houffalize\n                                        "
-                                ),
-                                _c("span", [
-                                  _vm._v("1er, 2éme et 3éme général")
-                                ])
-                              ])
-                            ]
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel sg-box" }, [
-                  _c("div", {}, [
-                    _c("h1", { staticClass: "title" }, [
-                      _vm._v(_vm._s(_vm.competence))
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "columns" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "column is-one-quarter margin-sg sg-grand"
-                        },
-                        [
-                          _c("div", { staticClass: "level-right" }, [
-                            _vm._v("Bootstrap")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _c("span", [
-                              _c("i", { staticClass: "fab fa-css3-alt" })
-                            ]),
-                            _vm._v(
-                              " CSS3\n                                    "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _c("span", [
-                              _c("i", { staticClass: "fab fa-git" })
-                            ]),
-                            _vm._v(" Git\n                                    ")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _c("span", [
-                              _c("i", { staticClass: "fab fa-html5" })
-                            ]),
-                            _vm._v(
-                              "HTML5\n                                    "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _c("span", [_c("i", { staticClass: "fab fa-js" })]),
-                            _vm._v(
-                              "JavaScript\n                                    "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _c("span", [
-                              _c("i", { staticClass: "fab fa-node" })
-                            ]),
-                            _vm._v(
-                              "nodejs\n                                    "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _c("span", [
-                              _c("i", { staticClass: "fab fa-react" })
-                            ]),
-                            _vm._v(
-                              "Reactjs\n                                    "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _c("span", [
-                              _c("i", { staticClass: "fab fa-php" })
-                            ]),
-                            _vm._v("Php\n                                    ")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _c("span", [
-                              _c("i", { staticClass: "fab fa-wordpress" })
-                            ]),
-                            _vm._v(
-                              "Wordpress\n                                    "
-                            )
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", {
-                        staticClass: "column is-one-quarter sg-grand"
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "column is-one-quarter sg-grand" },
-                        [
-                          _c("div", { staticClass: "level-left" }, [
-                            _vm._v("Ajax")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _vm._v("Babel")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _vm._v("Bulma")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _vm._v("Jquery")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _vm._v("MySql")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _vm._v("PhotoShop")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _vm._v("Phpmyadmin")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _vm._v("Illustrator")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _vm._v("Indesing")
                           ])
                         ]
                       )
@@ -10035,7 +10039,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33889" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39509" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

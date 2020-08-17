@@ -29,17 +29,188 @@
             </div>
         </nav>-->
         <div class="columns is-mobile sg-cont">
-            <div class="box box-carousel column is-one-quarter">
+            <div class="box box-carousel column is-one-quarter sg-40px">
                 <h1 class="sg-right title is-family-primary">{{bundler}}</h1>
                 <img class="img" src="../assets/IMG_20200520_145947.jpg" />
-                <h2 class="sg title is-family-primary">{{jobs}}</h2>
+                <h2 class="sg title is-family-primary padding-sg">{{jobs}}</h2>
             </div>
 
             <div class="column">
                 <carousel>
                     <CarouselSlide>
                         <div class="box box-carousel sg-box">
-                            <h1 class="title">Contact me</h1>
+                            <div class>
+                                <h1 class="title sg padding-sg">{{competence}}</h1>
+                                <div class="columns">
+                                    <div class="column is-one-quarter margin-sg sg-grand">
+                                        <div class="level-right">Bootstrap</div>
+                                        <div class="level-left">
+                                            <div class="i-sg">
+                                                <span>
+                                                    <i class="fab fa-css3-alt"></i>
+                                                </span>
+                                            </div>
+
+                                            <p>CSS3</p>
+                                        </div>
+                                        <div class="level-right">
+                                            <div class="i-sg">
+                                                <span>
+                                                    <i class="fab fa-git"></i>
+                                                </span>
+                                            </div>
+
+                                            <p>Git</p>
+                                        </div>
+                                        <div class="level-left">
+                                            <div class="i-sg">
+                                                <span>
+                                                    <i class="fab fa-html5"></i>
+                                                </span>
+                                            </div>
+
+                                            <p>HTML5</p>
+                                        </div>
+                                        <div class="level-right">
+                                            <div class="i-sg">
+                                                <span>
+                                                    <i class="fab fa-js"></i>
+                                                </span>
+                                            </div>
+
+                                            <p>JavaScript</p>
+                                        </div>
+                                        <div class="level-left">
+                                            <div class="i-sg">
+                                                <span>
+                                                    <i class="fab fa-node"></i>
+                                                </span>
+                                            </div>
+
+                                            <p>nodejs</p>
+                                        </div>
+                                        <div class="level-right">
+                                            <div class="i-sg">
+                                                <span>
+                                                    <i class="fab fa-react"></i>
+                                                </span>
+                                            </div>
+
+                                            <p>Reactjs</p>
+                                        </div>
+                                        <div class="level-left">
+                                            <div class="i-sg">
+                                                <span>
+                                                    <i class="fab fa-php"></i>
+                                                </span>
+                                            </div>
+
+                                            <p>Php</p>
+                                        </div>
+                                        <div class="level-right">
+                                            <div class="i-sg">
+                                                <span>
+                                                    <i class="fab fa-wordpress"></i>
+                                                </span>
+                                            </div>
+
+                                            <p>Wordpress</p>
+                                        </div>
+                                    </div>
+                                    <div class="column is-one-quarter sg-grand"></div>
+                                    <div class="column is-one-quarter sg-grand">
+                                        <div class="level-left">Ajax</div>
+                                        <div class="level-right">Babel</div>
+                                        <div class="level-left">Bulma</div>
+                                        <div class="level-right">Jquery</div>
+                                        <div class="level-left">MySql</div>
+                                        <div class="level-right">PhotoShop</div>
+                                        <div class="level-left">Phpmyadmin</div>
+                                        <div class="level-right">Illustrator</div>
+                                        <div class="level-left">Indesing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </CarouselSlide>
+                    <CarouselSlide>
+                        <div class="box box-carousel sg-box">
+                            <div>
+                                <h1 class="title sg-right sg-min">{{formation}}</h1>
+                                <div class="columns is-mobile sg-dateforma">
+                                    <div class="column">
+                                        <div class="sg-bottom">Janvier 2020 a maintenant</div>
+                                        <div class="sg-bottom sg-paddingforma">2017-2019</div>
+                                        <div class="sg-bottom">2013-2015</div>
+                                        <div class="sg-bottom sg-paddingforma2">2011-2013</div>
+                                        <div class="sg-bottom sg-paddingforma2">2008-2011</div>
+                                    </div>
+
+                                    <div class="column sg-floatr sg-forma is-two-thirds">
+                                        <div class="sg-bottom">
+                                            <span>
+                                                Formation
+                                                Becode
+                                            </span> Liège
+                                        </div>
+                                        <div class="sg-bottom">
+                                            Ipeps à Seraing formation en
+                                            <span>web développement</span>
+                                        </div>
+                                        <div class="sg-bottom">
+                                            Saint-Luc secondaire à Liège 5éme et 6éme
+                                            <span>infographie</span>
+                                        </div>
+                                        <div class="sg-bottom">
+                                            ARBH Bastogne 4éme section science forte et 5éme
+                                            <span>section art</span>
+                                        </div>
+                                        <div class="sg-bottom">
+                                            ARBH Houffalize
+                                            <span>1er, 2éme et 3éme général</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </CarouselSlide>
+                    <CarouselSlide>
+                        <div class="box box-carousel sg-box">
+                            <h1 class="title sg padding-sg">{{experience}}</h1>
+                            <div class="columns is-mobile">
+                                <div class="column sg-dateforma is-mobile">
+                                    <div class="sg-bottom">2015-2017 1 an et 6 mois</div>
+                                    <div class="sg-bottom">2014 6 mois</div>
+                                    <div class="sg-bottom sg-paddingforma2">2013 2 mois</div>
+                                    <div class="sg-bottom sg-paddingforma">2011-2012 2 Étés</div>
+                                </div>
+                                <div class="column sg-floatr sg-dateforma sg-forma is-two-thirds">
+                                    <div class="sg-bottom">
+                                        Employée :
+                                        <span>
+                                            communal à Houffalize Ménage et
+                                            garderie
+                                        </span>
+                                    </div>
+                                    <div class="sg-bottom">
+                                        Étudiante :
+                                        <span>commit de cuisine et plonge</span>
+                                    </div>
+                                    <div class="sg-bottom">
+                                        Étudiante :
+                                        <span>Ménage</span>
+                                    </div>
+                                    <div class="sg-bottom">
+                                        Étudiante :
+                                        <span>Accueil, animation, ménage et cafétéria</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </CarouselSlide>
+                    <CarouselSlide>
+                        <div class="box box-carousel sg-box">
+                            <h1 class="title sg-right sg-min">Contact me</h1>
                             <div class="columns">
                                 <div class="column">
                                     <div class="columns is-mobile sg-bottom">
@@ -125,20 +296,6 @@
                                                 </span>
                                             </div>
                                         </div>
-
-                                        <div class="field">
-                                            <label class="label">Subject</label>
-                                            <div class="control">
-                                                <div class="select">
-                                                    <select>
-                                                        <option>Select</option>
-                                                        <option>Recrutement</option>
-                                                        <option>Projet</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                         <div class="field">
                                             <label class="label">Message</label>
                                             <div class="control">
@@ -156,145 +313,6 @@
                                             </div>
                                         </div>
                                     </form>
-                                </div>
-                            </div>
-                        </div>
-                    </CarouselSlide>
-                    <CarouselSlide>
-                        <div class="box box-carousel sg-box">
-                            <h1 class="title">{{experience}}</h1>
-                            <div class="columns is-mobile">
-                                <div class="column sg-dateforma is-mobile">
-                                    <div class="sg-bottom">2015-2017 1 an et 6 mois</div>
-                                    <div class="sg-bottom">2014 6 mois</div>
-                                    <div class="sg-bottom sg-paddingforma2">2013 2 mois</div>
-                                    <div class="sg-bottom sg-paddingforma">2011-2012 2 Étés</div>
-                                </div>
-                                <div class="column sg-floatr sg-dateforma sg-forma is-two-thirds">
-                                    <div class="sg-bottom">
-                                        Employée :
-                                        <span>
-                                            communal à Houffalize Ménage et
-                                            garderie
-                                        </span>
-                                    </div>
-                                    <div class="sg-bottom">
-                                        Étudiante :
-                                        <span>commit de cuisine et plonge</span>
-                                    </div>
-                                    <div class="sg-bottom">
-                                        Étudiante :
-                                        <span>Ménage</span>
-                                    </div>
-                                    <div class="sg-bottom">
-                                        Étudiante :
-                                        <span>Accueil, animation, ménage et cafétéria</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </CarouselSlide>
-                    <CarouselSlide>
-                        <div class="box box-carousel sg-box">
-                            <div>
-                                <h class="title">{{formation}}</h>
-                                <div class="columns is-mobile sg-dateforma">
-                                    <div class="column">
-                                        <div class="sg-bottom">Janvier 2020 a maintenant</div>
-                                        <div class="sg-bottom sg-paddingforma">2017-2019</div>
-                                        <div class="sg-bottom">2013-2015</div>
-                                        <div class="sg-bottom sg-paddingforma2">2011-2013</div>
-                                        <div class="sg-bottom sg-paddingforma2">2008-2011</div>
-                                    </div>
-
-                                    <div class="column sg-floatr sg-forma is-two-thirds">
-                                        <div class="sg-bottom">
-                                            <span>
-                                                Formation
-                                                Becode
-                                            </span> Liège
-                                        </div>
-                                        <div class="sg-bottom">
-                                            Ipeps à Seraing formation en
-                                            <span>web développement</span>
-                                        </div>
-                                        <div class="sg-bottom">
-                                            Saint-Luc secondaire à Liège 5éme et 6éme
-                                            <span>infographie</span>
-                                        </div>
-                                        <div class="sg-bottom">
-                                            ARBH Bastogne 4éme section science forte et 5éme
-                                            <span>section art</span>
-                                        </div>
-                                        <div class="sg-bottom">
-                                            ARBH Houffalize
-                                            <span>1er, 2éme et 3éme général</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </CarouselSlide>
-                    <CarouselSlide>
-                        <div class="box box-carousel sg-box">
-                            <div class>
-                                <h1 class="title">{{competence}}</h1>
-                                <div class="columns">
-                                    <div class="column is-one-quarter margin-sg sg-grand">
-                                        <div class="level-right">Bootstrap</div>
-                                        <div class="level-left">
-                                            <span>
-                                                <i class="fab fa-css3-alt"></i>
-                                            </span> CSS3
-                                        </div>
-                                        <div class="level-right">
-                                            <span>
-                                                <i class="fab fa-git"></i>
-                                            </span> Git
-                                        </div>
-                                        <div class="level-left">
-                                            <span>
-                                                <i class="fab fa-html5"></i>
-                                            </span>HTML5
-                                        </div>
-                                        <div class="level-right">
-                                            <span>
-                                                <i class="fab fa-js"></i>
-                                            </span>JavaScript
-                                        </div>
-                                        <div class="level-left">
-                                            <span>
-                                                <i class="fab fa-node"></i>
-                                            </span>nodejs
-                                        </div>
-                                        <div class="level-right">
-                                            <span>
-                                                <i class="fab fa-react"></i>
-                                            </span>Reactjs
-                                        </div>
-                                        <div class="level-left">
-                                            <span>
-                                                <i class="fab fa-php"></i>
-                                            </span>Php
-                                        </div>
-                                        <div class="level-right">
-                                            <span>
-                                                <i class="fab fa-wordpress"></i>
-                                            </span>Wordpress
-                                        </div>
-                                    </div>
-                                    <div class="column is-one-quarter sg-grand"></div>
-                                    <div class="column is-one-quarter sg-grand">
-                                        <div class="level-left">Ajax</div>
-                                        <div class="level-right">Babel</div>
-                                        <div class="level-left">Bulma</div>
-                                        <div class="level-right">Jquery</div>
-                                        <div class="level-left">MySql</div>
-                                        <div class="level-right">PhotoShop</div>
-                                        <div class="level-left">Phpmyadmin</div>
-                                        <div class="level-right">Illustrator</div>
-                                        <div class="level-left">Indesing</div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -343,12 +361,19 @@ export default {
     position: relative;
     z-index: 5;
 }
+
+.sg-40px {
+    margin-right: 40px;
+    flex: none;
+    width: 24% !important                        ;
+}
+
 a {
     color: #8d1414;
 }
 
 .sg-grand {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .margin-sg {
@@ -365,7 +390,7 @@ nav {
 }
 
 form {
-    margin-top: -80px;
+    margin-top: -100px;
 }
 
 .img {
@@ -374,12 +399,16 @@ form {
     margin-left: 19%;
 }
 .sg {
-    border-left: 2px solid;
+    border-left: 3px solid #8d1414;
     margin: 25px;
 }
 .sg-right {
-    border-right: 2px solid;
+    border-right: 3px solid #8d1414;
     margin: 25px;
+}
+
+.sg-min {
+    width: 190px;
 }
 
 .sg-padding {
@@ -392,6 +421,10 @@ form {
     color: #646363 !important;
 }
 
+.padding-sg {
+    padding-left: 17px;
+}
+
 .sg-box {
     height: 475px;
 }
@@ -399,6 +432,7 @@ form {
 .box {
     background-color: rgb(223, 219, 219) !important;
     color: #646363 !important;
+    border-radius: 0;
 }
 
 .box-carousel {
@@ -434,6 +468,11 @@ form {
 
 span {
     color: #8d1414;
+}
+
+.i-sg {
+    margin-right: 11px;
+    font-size: 25px;
 }
 
 .button:active,
