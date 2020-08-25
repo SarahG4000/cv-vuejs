@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Cv en ligne avec vue.js",
   "main": "index.html",
+  "private": true,
   "scripts": {
     "lint": "npx eslint --fix --cache src",
     "build": "npx parcel build src/index.html",
@@ -12,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/SarahG4000/cv-vuejs.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
