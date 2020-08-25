@@ -1,0 +1,13 @@
+.sg-nav {
+    margin-right: 110px;
+    margin-left: 0%;
+}
+
+html {
+    background: #434343 !important;
+    color: white !important;
+}
+
+p h1 h2 h3 a {
+    color: #434343;
+}
