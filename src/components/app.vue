@@ -1,19 +1,27 @@
 <template>
     <div class="container">
         <div class="box column is-one-fifth">
-            <h1 class="sg-right title is-family-primary color-sg">{{bundler}}</h1>
+            <h1 class="sg-right title is-family-primary color-sg">
+                {{ bundler }}
+            </h1>
 
             <img class="img" src="../assets/IMG_20200520_145947.jpg" />
-            <h2 class="sg title is-family-primary padding-sg color-sg">{{jobs}}</h2>
+            <h2 class="sg title is-family-primary padding-sg color-sg">
+                {{ jobs }}
+            </h2>
         </div>
 
         <carousel>
             <CarouselSlide>
                 <div class="sg-box">
                     <div>
-                        <h1 class="title sg padding-sg bottom-sg">{{competence}}</h1>
+                        <h1 class="title sg padding-sg bottom-sg">
+                            {{ competence }}
+                        </h1>
                         <div class="columns">
-                            <div class="column is-one-quarter margin-sg sg-grand">
+                            <div
+                                class="column is-one-quarter margin-sg sg-grand"
+                            >
                                 <div class="level-left">
                                     <div class="i-sg">
                                         <span>
@@ -107,40 +115,55 @@
             <CarouselSlide>
                 <div class="sg-box">
                     <div>
-                        <h1 class="title sg-right sg-min bottom-sg">{{formation}}</h1>
+                        <h1 class="title sg-right sg-min bottom-sg">
+                            {{ formation }}
+                        </h1>
                         <div class="columns is-mobile sg-dateforma">
                             <div class="column is-one-fifth sg-style0"></div>
                             <div class="column is-one-third">
-                                <div class="sg-bottom">Janvier 2020 a maintenant</div>
-                                <div class="sg-bottom sg-paddingforma2">2017-2019</div>
-                                <div class="sg-bottom sg-paddingforma">2013-2015</div>
-                                <div class="sg-bottom sg-paddingforma">2011-2013</div>
-                                <div class="sg-bottom sg-paddingform11">2008-2011</div>
+                                <div class="sg-bottom">
+                                    Janvier 2020 a maintenant
+                                </div>
+                                <div class="sg-bottom sg-paddingforma2">
+                                    2017-2019
+                                </div>
+                                <div class="sg-bottom sg-paddingforma">
+                                    2013-2015
+                                </div>
+                                <div class="sg-bottom sg-paddingforma">
+                                    2011-2013
+                                </div>
+                                <div class="sg-bottom sg-paddingform11">
+                                    2008-2011
+                                </div>
                             </div>
-                            <div class="column is-one-fifth sg-grand sg-style1"></div>
+                            <div
+                                class="column is-one-fifth sg-grand sg-style1"
+                            ></div>
 
                             <div class="column sg-floatr sg-forma is-one-third">
                                 <div class="sg-bottom">
                                     <span>
-                                        Formation
-                                        Becode
-                                    </span> Liège
+                                        Formation Becode
+                                    </span>
+                                    Liège
                                 </div>
                                 <div class="sg-bottom">
                                     Ipeps à Seraing formation en
                                     <span>web développement</span>
                                 </div>
                                 <div class="sg-bottom">
-                                    Saint-Luc secondaire à Liège 5éme et 6éme
+                                    Saint-Luc secondaire à Liège 5ème et 6ème
                                     <span>infographie</span>
                                 </div>
                                 <div class="sg-bottom">
-                                    ARBH Bastogne 4éme section science forte et 5éme
+                                    ARBH Bastogne 4ème section science forte et
+                                    5éme
                                     <span>section art</span>
                                 </div>
                                 <div class="sg-bottom">
                                     ARBH Houffalize
-                                    <span>1er, 2éme et 3éme général</span>
+                                    <span>1er, 2ème et 3ème général</span>
                                 </div>
                             </div>
                         </div>
@@ -149,22 +172,33 @@
             </CarouselSlide>
             <CarouselSlide>
                 <div class="sg-box">
-                    <h1 class="title sg padding-sg bottom-sg">{{experience}}</h1>
+                    <h1 class="title sg padding-sg bottom-sg">
+                        {{ experience }}
+                    </h1>
                     <div class="columns is-mobile">
                         <div class="column is-one-fifth sg-style0"></div>
                         <div class="column sg-dateforma is-one-third is-mobile">
-                            <div class="sg-bottom">2015-2017 18 mois</div>
-                            <div class="sg-bottom sg-paddingforma">2014 6 mois</div>
-                            <div class="sg-bottom sg-paddingforma2">2013 2 mois</div>
-                            <div class="sg-bottom sg-paddingforma2">2011-2012 2 Étés</div>
+                            <div class="sg-bottom">2015-2017 : 18 mois</div>
+                            <div class="sg-bottom sg-paddingforma">
+                                2014 : 6 mois
+                            </div>
+                            <div class="sg-bottom sg-paddingforma2">
+                                2013 : 2 mois
+                            </div>
+                            <div class="sg-bottom sg-paddingforma2">
+                                Étés : 2011-2012
+                            </div>
                         </div>
-                        <div class="column is-one-fifth sg-grand sg-style2"></div>
-                        <div class="column sg-floatr sg-dateforma sg-forma is-one-third">
+                        <div
+                            class="column is-one-fifth sg-grand sg-style2"
+                        ></div>
+                        <div
+                            class="column sg-floatr sg-dateforma sg-forma is-one-third"
+                        >
                             <div class="sg-bottom">
                                 Employée :
                                 <span>
-                                    communal à Houffalize Ménage et
-                                    garderie
+                                    communal à Houffalize Ménage et garderie
                                 </span>
                             </div>
                             <div class="sg-bottom">
@@ -177,7 +211,10 @@
                             </div>
                             <div class="sg-bottom">
                                 Étudiante :
-                                <span>Accueil, animation, ménage et cafétéria</span>
+                                <span
+                                    >Accueil, animation, ménage et
+                                    cafétéria</span
+                                >
                             </div>
                         </div>
                     </div>
@@ -185,9 +222,11 @@
             </CarouselSlide>
             <CarouselSlide>
                 <div class="bsg-box">
-                    <h1 class="title sg-right sg-min bottom-sg">{{home}}</h1>
+                    <h1 class="title sg-right sg-min bottom-sg">{{ home }}</h1>
                     <div class="columns">
-                        <div class="column is-one-fifth sg-grand sg-style0"></div>
+                        <div
+                            class="column is-one-fifth sg-grand sg-style0"
+                        ></div>
                         <div class="column is-one-third">
                             <div class="columns is-mobile sg-bottom">
                                 <div class="column is-one-quarter sg-padding">
@@ -198,7 +237,8 @@
                                 <a
                                     class="column"
                                     href="https://www.facebook.com/sarah.guillaume.140/"
-                                >Facebook</a>
+                                    >Facebook</a
+                                >
                             </div>
                             <div class="columns is-mobile sg-bottom">
                                 <div class="column is-one-quarter sg-padding">
@@ -206,7 +246,11 @@
                                         <i class="fab fa-github"></i>
                                     </span>
                                 </div>
-                                <a class="column" href="https://github.com/SarahG4000">Sarah</a>
+                                <a
+                                    class="column"
+                                    href="https://github.com/SarahG4000"
+                                    >Sarah</a
+                                >
                             </div>
                             <div class="columns is-mobile sg-bottom">
                                 <div class="column is-one-quarter sg-padding">
@@ -217,7 +261,8 @@
                                 <a
                                     class="column"
                                     href="https://www.linkedin.com/in/sarah-guillaume-06993219a/"
-                                >Linkedin</a>
+                                    >Linkedin</a
+                                >
                             </div>
                             <div class="columns is-mobile sg-bottom">
                                 <div class="column is-one-quarter sg-padding">
@@ -225,7 +270,9 @@
                                         <i class="fas fa-envelope"></i>
                                     </span>
                                 </div>
-                                <p class="column">sarah.guillaume4000@gmail.com</p>
+                                <p class="column">
+                                    sarah.guillaume4000@gmail.com
+                                </p>
                             </div>
                             <div class="columns is-mobile sg-bottom">
                                 <div class="column is-one-quarter sg-padding">
@@ -236,7 +283,9 @@
                                 <p class="column">SarahG#4150</p>
                             </div>
                         </div>
-                        <div class="column is-one-fifth sg-grand sg-style2"></div>
+                        <div
+                            class="column is-one-fifth sg-grand sg-style2"
+                        ></div>
 
                         <div class="column is-one-third">
                             <form
@@ -247,7 +296,9 @@
                             >
                                 <div class="field">
                                     <label class="label">Name</label>
-                                    <div class="control has-icons-left has-icons-right">
+                                    <div
+                                        class="control has-icons-left has-icons-right"
+                                    >
                                         <input
                                             class="input"
                                             type="text"
@@ -262,7 +313,9 @@
 
                                 <div class="field">
                                     <label class="label">Email</label>
-                                    <div class="control has-icons-left has-icons-right">
+                                    <div
+                                        class="control has-icons-left has-icons-right"
+                                    >
                                         <input
                                             class="input"
                                             type="email"
@@ -277,7 +330,10 @@
                                 <div class="field">
                                     <label class="label">Message</label>
                                     <div class="control">
-                                        <textarea class="textarea" placeholder="Textarea"></textarea>
+                                        <textarea
+                                            class="textarea"
+                                            placeholder="Textarea"
+                                        ></textarea>
                                     </div>
                                 </div>
 
@@ -287,7 +343,9 @@
                                             class="button sg-button is-link"
                                             type="submit"
                                             value="Envoyer"
-                                        >Submit</button>
+                                        >
+                                            Submit
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -321,7 +379,7 @@ export default {
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .container {
     color: #646363 !important;
     // background: darkblue;
