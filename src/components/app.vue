@@ -320,7 +320,7 @@
                                             class="input"
                                             type="email"
                                             placeholder="Email input"
-                                            value="mail@"
+                                            value="@mail"
                                         />
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-envelope"></i>
