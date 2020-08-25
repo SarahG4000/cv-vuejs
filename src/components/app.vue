@@ -332,6 +332,8 @@ export default {
 
 .sg-button {
     font-size: 20px !important;
+    color: #646363;
+    top: 0;
 }
 
 .box {

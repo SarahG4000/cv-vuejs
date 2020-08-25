@@ -8972,7 +8972,7 @@ exports.default = _default;
           "button",
           {
             staticClass:
-              "button is-boxed carousel carousel__nav carousel__prev column sg-prev",
+              "button button-hieght is-boxed carousel carousel__nav carousel__prev column sg-prev",
             on: {
               click: function($event) {
                 $event.preventDefault()
@@ -8987,7 +8987,7 @@ exports.default = _default;
           "button",
           {
             staticClass:
-              "button is-boxed carousel carousel__nav carousel__next column sg-next",
+              "button button-hieght is-boxed carousel carousel__nav carousel__next column sg-next",
             on: {
               click: function($event) {
                 $event.preventDefault()

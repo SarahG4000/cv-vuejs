@@ -20,6 +20,9 @@ button {
   color: #646363 !important;
   font-size: 35px !important;
   border: none;
+}
+
+.button-hieght {
   margin-top: 50vh !important;
   /* poussé de la moitié de hauteur de viewport */
   transform: translateY(-145%) !important;
@@ -65,6 +68,8 @@ button {
 
 .sg-button {
   font-size: 20px !important;
+  color: #646363;
+  top: 0;
 }
 
 .box {

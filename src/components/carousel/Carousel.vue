@@ -3,13 +3,13 @@
         <slot></slot>
         <div>
             <button
-                class="button is-boxed carousel carousel__nav carousel__prev column sg-prev"
+                class="button button-hieght is-boxed carousel carousel__nav carousel__prev column sg-prev"
                 @click.prevent="prev"
             >
                 <i class="fas fa-angle-left size-sg"></i>
             </button>
             <button
-                class="button is-boxed carousel carousel__nav carousel__next column sg-next"
+                class="button button-hieght is-boxed carousel carousel__nav carousel__next column sg-next"
                 @click.prevent="next"
             >
                 <i class="fas fa-angle-right size-sg"></i>
@@ -78,6 +78,9 @@ button {
     color: #646363 !important;
     font-size: 35px !important;
     border: none;
+}
+
+.button-hieght {
     margin-top: 50vh !important; /* poussé de la moitié de hauteur de viewport */
     transform: translateY(-145%) !important;
 }
