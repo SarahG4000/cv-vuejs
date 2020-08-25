@@ -30,7 +30,7 @@ export default {
 }
 
 .slide-leave-active {
-    animation: rollOut 1s;
+    animation: rollOut 0.2s;
     position: absolute;
     top: 0;
     bottom: 0;
