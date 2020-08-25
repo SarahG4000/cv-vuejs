@@ -203,7 +203,7 @@
                             </div>
                             <div class="sg-bottom">
                                 Étudiante :
-                                <span>commit de cuisine et plonge</span>
+                                <span>commis de cuisine et plonge</span>
                             </div>
                             <div class="sg-bottom">
                                 Étudiante :
