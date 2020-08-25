@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Cv en ligne avec vue.js",
   "main": "index.html",
-  "private": true,
+  "private": false,
   "scripts": {
     "lint": "npx eslint --fix --cache src",
     "build": "npx parcel build src/index.html",
