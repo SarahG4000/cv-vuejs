@@ -23,33 +23,16 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .slide-enter-active {
-    animation: flipInX 3s;
+    /*animation d'entre et leave anomation de sortie*/
+    animation: rollIn 2s;
 }
 
 .slide-leave-active {
-    animation: flipOutX 1s;
+    animation: rollOut 1s;
     position: absolute;
     top: 0;
     bottom: 0;
 }
-
-/* @keyframes bounceInDown {
-    from {
-        transform: translateY(200%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounceOutDown {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-200%);
-    }
-} */
 </style>

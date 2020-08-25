@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel sg-align">
+    <div class>
         <slot></slot>
         <div>
             <button
@@ -40,12 +40,14 @@ export default {
     },
     methods: {
         next() {
+            //incrementation de bouton next
             this.index++;
             if (this.index == this.slidesCount) {
                 this.index = 0;
             }
         },
         prev() {
+            //incrementation du bouton prev
             this.index--;
             if (this.index < 0) {
                 this.index = this.slidesCount - 1;
@@ -55,7 +57,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .carousel {
     position: relative;
 }
@@ -72,27 +74,24 @@ export default {
 }
 
 button {
-    background: #646363 !important;
-    color: white !important;
-    font-size: 35px;
+    background: white !important;
+    color: #646363 !important;
+    font-size: 35px !important;
+    border: none;
+    margin-top: 50vh !important; /* poussé de la moitié de hauteur de viewport */
+    transform: translateY(-145%) !important;
 }
 
 .sg-next {
     float: right;
-    margin-right: -64px;
-    height: 473.5px !important;
-    margin-top: -49px;
-    border: #dfdbdb solid 1px !important;
-    border-radius: 0 !important;
+    margin-right: -9px;
+    margin-top: 150px;
 }
 
 .sg-prev {
     float: left;
-    height: 473.5px !important;
-    margin-left: -67px;
-    margin-top: -49px;
-    border: #dfdbdb solid 1px !important;
-    border-radius: 0 !important;
+    margin-left: -9px;
+    margin-top: 150px;
 }
 
 .size-sg {

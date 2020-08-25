@@ -8931,6 +8931,7 @@ var _default = {
   },
   methods: {
     next: function next() {
+      //incrementation de bouton next
       this.index++;
 
       if (this.index == this.slidesCount) {
@@ -8938,6 +8939,7 @@ var _default = {
       }
     },
     prev: function prev() {
+      //incrementation du bouton prev
       this.index--;
 
       if (this.index < 0) {
@@ -8961,7 +8963,7 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "carousel sg-align" },
+    {},
     [
       _vm._t("default"),
       _vm._v(" "),
@@ -9178,6 +9180,7 @@ exports.default = {
     };
   },
   components: {
+    //important des elements
     Carousel: function Carousel() {
       return Promise.resolve().then(function () {
         return __importStar(require("./carousel/Carousel.vue"));
@@ -9202,599 +9205,544 @@ exports.default = {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "columns is-mobile sg-cont" }, [
-      _c(
-        "div",
-        { staticClass: "box box-carousel column is-one-quarter sg-40px" },
-        [
-          _c("h1", { staticClass: "sg-right title is-family-primary" }, [
-            _vm._v(_vm._s(_vm.bundler))
-          ]),
-          _vm._v(" "),
-          _c("img", {
-            staticClass: "img",
-            attrs: { src: "/IMG_20200520_145947.8c23fea6.jpg" }
-          }),
-          _vm._v(" "),
-          _c("h2", { staticClass: "sg title is-family-primary padding-sg" }, [
-            _vm._v(_vm._s(_vm.jobs))
-          ])
-        ]
-      ),
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c("div", { staticClass: "box column is-one-fifth" }, [
+        _c("h1", { staticClass: "sg-right title is-family-primary color-sg" }, [
+          _vm._v(_vm._s(_vm.bundler))
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          staticClass: "img",
+          attrs: { src: "/IMG_20200520_145947.8c23fea6.jpg" }
+        }),
+        _vm._v(" "),
+        _c(
+          "h2",
+          { staticClass: "sg title is-family-primary padding-sg color-sg" },
+          [_vm._v(_vm._s(_vm.jobs))]
+        )
+      ]),
       _vm._v(" "),
       _c(
-        "div",
-        { staticClass: "column" },
+        "carousel",
         [
-          _c(
-            "carousel",
-            [
-              _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel sg-box" }, [
-                  _c("div", {}, [
-                    _c("h1", { staticClass: "title sg padding-sg" }, [
-                      _vm._v(_vm._s(_vm.competence))
+          _c("CarouselSlide", [
+            _c("div", { staticClass: "sg-box" }, [
+              _c("div", [
+                _c("h1", { staticClass: "title sg padding-sg bottom-sg" }, [
+                  _vm._v(_vm._s(_vm.competence))
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "columns" }, [
+                  _c(
+                    "div",
+                    { staticClass: "column is-one-quarter margin-sg sg-grand" },
+                    [
+                      _c("div", { staticClass: "level-left" }, [
+                        _c("div", { staticClass: "i-sg" }, [
+                          _c("span", [
+                            _c("i", { staticClass: "fab fa-css3-alt" })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("CSS3")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "level-right" }, [
+                        _c("div", { staticClass: "i-sg" }, [
+                          _c("span", [_c("i", { staticClass: "fab fa-git" })])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("Git")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "level-left" }, [
+                        _c("div", { staticClass: "i-sg" }, [
+                          _c("span", [_c("i", { staticClass: "fab fa-html5" })])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("HTML5")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "level-right" }, [
+                        _c("div", { staticClass: "i-sg" }, [
+                          _c("span", [_c("i", { staticClass: "fab fa-js" })])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("JavaScript")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "level-left" }, [
+                        _c("div", { staticClass: "i-sg" }, [
+                          _c("span", [_c("i", { staticClass: "fab fa-node" })])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("nodejs")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "level-right" }, [
+                        _c("div", { staticClass: "i-sg" }, [
+                          _c("span", [_c("i", { staticClass: "fab fa-react" })])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("Reactjs")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "level-left" }, [
+                        _c("div", { staticClass: "i-sg" }, [
+                          _c("span", [_c("i", { staticClass: "fab fa-php" })])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("Php")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "level-right" }, [
+                        _c("div", { staticClass: "i-sg" }, [
+                          _c("span", [
+                            _c("i", { staticClass: "fab fa-wordpress" })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("Wordpress")])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-one-third sg-grand" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-one-quarter sg-grand" }, [
+                    _c("div", { staticClass: "level-left" }, [_vm._v("Ajax")]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-right" }, [
+                      _vm._v("Babel")
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "columns" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "column is-one-quarter margin-sg sg-grand"
-                        },
-                        [
-                          _c("div", { staticClass: "level-right" }, [
-                            _vm._v("Bootstrap")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _c("div", { staticClass: "i-sg" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "fab fa-css3-alt" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("CSS3")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _c("div", { staticClass: "i-sg" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "fab fa-git" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("Git")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _c("div", { staticClass: "i-sg" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "fab fa-html5" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("HTML5")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _c("div", { staticClass: "i-sg" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "fab fa-js" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("JavaScript")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _c("div", { staticClass: "i-sg" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "fab fa-node" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("nodejs")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _c("div", { staticClass: "i-sg" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "fab fa-react" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("Reactjs")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _c("div", { staticClass: "i-sg" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "fab fa-php" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("Php")])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _c("div", { staticClass: "i-sg" }, [
-                              _c("span", [
-                                _c("i", { staticClass: "fab fa-wordpress" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("Wordpress")])
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", {
-                        staticClass: "column is-one-quarter sg-grand"
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "column is-one-quarter sg-grand" },
-                        [
-                          _c("div", { staticClass: "level-left" }, [
-                            _vm._v("Ajax")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _vm._v("Babel")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _vm._v("Bulma")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _vm._v("Jquery")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _vm._v("MySql")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _vm._v("PhotoShop")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _vm._v("Phpmyadmin")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-right" }, [
-                            _vm._v("Illustrator")
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "level-left" }, [
-                            _vm._v("Indesing")
-                          ])
-                        ]
-                      )
+                    _c("div", { staticClass: "level-left" }, [
+                      _vm._v("Bootstrap")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-right" }, [
+                      _vm._v("Bulma")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-left" }, [
+                      _vm._v("Jquery")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-right" }, [
+                      _vm._v("MySql")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-left" }, [
+                      _vm._v("PhotoShop")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-right" }, [
+                      _vm._v("Phpmyadmin")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-left" }, [
+                      _vm._v("Illustrator")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "level-right" }, [
+                      _vm._v("Indesing")
                     ])
                   ])
                 ])
-              ]),
-              _vm._v(" "),
-              _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel sg-box" }, [
-                  _c("div", [
-                    _c("h1", { staticClass: "title sg-right sg-min" }, [
-                      _vm._v(_vm._s(_vm.formation))
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("CarouselSlide", [
+            _c("div", { staticClass: "sg-box" }, [
+              _c("div", [
+                _c("h1", { staticClass: "title sg-right sg-min bottom-sg" }, [
+                  _vm._v(_vm._s(_vm.formation))
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "columns is-mobile sg-dateforma" }, [
+                  _c("div", { staticClass: "column is-one-fifth sg-style0" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-one-third" }, [
+                    _c("div", { staticClass: "sg-bottom" }, [
+                      _vm._v("Janvier 2020 a maintenant")
                     ]),
                     _vm._v(" "),
+                    _c("div", { staticClass: "sg-bottom sg-paddingforma2" }, [
+                      _vm._v("2017-2019")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "sg-bottom sg-paddingforma" }, [
+                      _vm._v("2013-2015")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "sg-bottom sg-paddingforma" }, [
+                      _vm._v("2011-2013")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "sg-bottom sg-paddingform11" }, [
+                      _vm._v("2008-2011")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", {
+                    staticClass: "column is-one-fifth sg-grand sg-style1"
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "column sg-floatr sg-forma is-one-third" },
+                    [
+                      _c("div", { staticClass: "sg-bottom" }, [
+                        _c("span", [
+                          _vm._v(
+                            "\n                                    Formation\n                                    Becode\n                                "
+                          )
+                        ]),
+                        _vm._v(" Liège\n                            ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sg-bottom" }, [
+                        _vm._v(
+                          "\n                                Ipeps à Seraing formation en\n                                "
+                        ),
+                        _c("span", [_vm._v("web développement")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sg-bottom" }, [
+                        _vm._v(
+                          "\n                                Saint-Luc secondaire à Liège 5éme et 6éme\n                                "
+                        ),
+                        _c("span", [_vm._v("infographie")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sg-bottom" }, [
+                        _vm._v(
+                          "\n                                ARBH Bastogne 4éme section science forte et 5éme\n                                "
+                        ),
+                        _c("span", [_vm._v("section art")])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "sg-bottom" }, [
+                        _vm._v(
+                          "\n                                ARBH Houffalize\n                                "
+                        ),
+                        _c("span", [_vm._v("1er, 2éme et 3éme général")])
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("CarouselSlide", [
+            _c("div", { staticClass: "sg-box" }, [
+              _c("h1", { staticClass: "title sg padding-sg bottom-sg" }, [
+                _vm._v(_vm._s(_vm.experience))
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns is-mobile" }, [
+                _c("div", { staticClass: "column is-one-fifth sg-style0" }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "column sg-dateforma is-one-third is-mobile" },
+                  [
+                    _c("div", { staticClass: "sg-bottom" }, [
+                      _vm._v("2015-2017 18 mois")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "sg-bottom sg-paddingforma" }, [
+                      _vm._v("2014 6 mois")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "sg-bottom sg-paddingforma2" }, [
+                      _vm._v("2013 2 mois")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "sg-bottom sg-paddingforma2" }, [
+                      _vm._v("2011-2012 2 Étés")
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "column is-one-fifth sg-grand sg-style2"
+                }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "column sg-floatr sg-dateforma sg-forma is-one-third"
+                  },
+                  [
+                    _c("div", { staticClass: "sg-bottom" }, [
+                      _vm._v(
+                        "\n                            Employée :\n                            "
+                      ),
+                      _c("span", [
+                        _vm._v(
+                          "\n                                communal à Houffalize Ménage et\n                                garderie\n                            "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "sg-bottom" }, [
+                      _vm._v(
+                        "\n                            Étudiante :\n                            "
+                      ),
+                      _c("span", [_vm._v("commit de cuisine et plonge")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "sg-bottom" }, [
+                      _vm._v(
+                        "\n                            Étudiante :\n                            "
+                      ),
+                      _c("span", [_vm._v("Ménage")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "sg-bottom" }, [
+                      _vm._v(
+                        "\n                            Étudiante :\n                            "
+                      ),
+                      _c("span", [
+                        _vm._v("Accueil, animation, ménage et cafétéria")
+                      ])
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("CarouselSlide", [
+            _c("div", { staticClass: "bsg-box" }, [
+              _c("h1", { staticClass: "title sg-right sg-min bottom-sg" }, [
+                _vm._v(_vm._s(_vm.home))
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c("div", {
+                  staticClass: "column is-one-fifth sg-grand sg-style0"
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "column is-one-third" }, [
+                  _c("div", { staticClass: "columns is-mobile sg-bottom" }, [
                     _c(
                       "div",
-                      { staticClass: "columns is-mobile sg-dateforma" },
+                      { staticClass: "column is-one-quarter sg-padding" },
                       [
-                        _c("div", { staticClass: "column" }, [
-                          _c("div", { staticClass: "sg-bottom" }, [
-                            _vm._v("Janvier 2020 a maintenant")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "sg-bottom sg-paddingforma" },
-                            [_vm._v("2017-2019")]
-                          ),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "sg-bottom" }, [
-                            _vm._v("2013-2015")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "sg-bottom sg-paddingforma2" },
-                            [_vm._v("2011-2013")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "sg-bottom sg-paddingforma2" },
-                            [_vm._v("2008-2011")]
-                          )
+                        _c("span", { staticClass: "is-size-3" }, [
+                          _c("i", { staticClass: "fab fa-facebook-square" })
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "column",
+                        attrs: {
+                          href: "https://www.facebook.com/sarah.guillaume.140/"
+                        }
+                      },
+                      [_vm._v("Facebook")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns is-mobile sg-bottom" }, [
+                    _c(
+                      "div",
+                      { staticClass: "column is-one-quarter sg-padding" },
+                      [
+                        _c("span", { staticClass: "is-size-3" }, [
+                          _c("i", { staticClass: "fab fa-github" })
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "column",
+                        attrs: { href: "https://github.com/SarahG4000" }
+                      },
+                      [_vm._v("Sarah")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns is-mobile sg-bottom" }, [
+                    _c(
+                      "div",
+                      { staticClass: "column is-one-quarter sg-padding" },
+                      [
+                        _c("span", { staticClass: "is-size-3" }, [
+                          _c("i", { staticClass: "fab fa-linkedin" })
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "column",
+                        attrs: {
+                          href:
+                            "https://www.linkedin.com/in/sarah-guillaume-06993219a/"
+                        }
+                      },
+                      [_vm._v("Linkedin")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns is-mobile sg-bottom" }, [
+                    _c(
+                      "div",
+                      { staticClass: "column is-one-quarter sg-padding" },
+                      [
+                        _c("span", { staticClass: "is-size-3" }, [
+                          _c("i", { staticClass: "fas fa-envelope" })
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "column" }, [
+                      _vm._v("sarah.guillaume4000@gmail.com")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "columns is-mobile sg-bottom" }, [
+                    _c(
+                      "div",
+                      { staticClass: "column is-one-quarter sg-padding" },
+                      [
+                        _c("span", { staticClass: "is-size-3" }, [
+                          _c("i", { staticClass: "fab fa-discord" })
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "column" }, [_vm._v("SarahG#4150")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "column is-one-fifth sg-grand sg-style2"
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "column is-one-third" }, [
+                  _c(
+                    "form",
+                    {
+                      attrs: {
+                        method: "",
+                        action: "javascript:sendMail()",
+                        name: "envoi",
+                        enctype: "text/plain"
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "field" }, [
+                        _c("label", { staticClass: "label" }, [_vm._v("Name")]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "control has-icons-left has-icons-right"
+                          },
+                          [
+                            _c("input", {
+                              staticClass: "input",
+                              attrs: {
+                                type: "text",
+                                placeholder: "Text input",
+                                value: "Name"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              { staticClass: "icon is-small is-left" },
+                              [_c("i", { staticClass: "fas fa-user" })]
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "field" }, [
+                        _c("label", { staticClass: "label" }, [
+                          _vm._v("Email")
                         ]),
                         _vm._v(" "),
                         _c(
                           "div",
                           {
                             staticClass:
-                              "column sg-floatr sg-forma is-two-thirds"
+                              "control has-icons-left has-icons-right"
                           },
                           [
-                            _c("div", { staticClass: "sg-bottom" }, [
-                              _c("span", [
-                                _vm._v(
-                                  "\n                                            Formation\n                                            Becode\n                                        "
-                                )
-                              ]),
-                              _vm._v(
-                                " Liège\n                                    "
-                              )
-                            ]),
+                            _c("input", {
+                              staticClass: "input",
+                              attrs: {
+                                type: "email",
+                                placeholder: "Email input",
+                                value: "mail@"
+                              }
+                            }),
                             _vm._v(" "),
-                            _c("div", { staticClass: "sg-bottom" }, [
-                              _vm._v(
-                                "\n                                        Ipeps à Seraing formation en\n                                        "
-                              ),
-                              _c("span", [_vm._v("web développement")])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "sg-bottom" }, [
-                              _vm._v(
-                                "\n                                        Saint-Luc secondaire à Liège 5éme et 6éme\n                                        "
-                              ),
-                              _c("span", [_vm._v("infographie")])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "sg-bottom" }, [
-                              _vm._v(
-                                "\n                                        ARBH Bastogne 4éme section science forte et 5éme\n                                        "
-                              ),
-                              _c("span", [_vm._v("section art")])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "sg-bottom" }, [
-                              _vm._v(
-                                "\n                                        ARBH Houffalize\n                                        "
-                              ),
-                              _c("span", [_vm._v("1er, 2éme et 3éme général")])
-                            ])
+                            _c(
+                              "span",
+                              { staticClass: "icon is-small is-left" },
+                              [_c("i", { staticClass: "fas fa-envelope" })]
+                            )
                           ]
                         )
-                      ]
-                    )
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel sg-box" }, [
-                  _c("h1", { staticClass: "title sg padding-sg" }, [
-                    _vm._v(_vm._s(_vm.experience))
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "columns is-mobile" }, [
-                    _c(
-                      "div",
-                      { staticClass: "column sg-dateforma is-mobile" },
-                      [
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v("2015-2017 1 an et 6 mois")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "field" }, [
+                        _c("label", { staticClass: "label" }, [
+                          _vm._v("Message")
                         ]),
                         _vm._v(" "),
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v("2014 6 mois")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "sg-bottom sg-paddingforma2" },
-                          [_vm._v("2013 2 mois")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "sg-bottom sg-paddingforma" },
-                          [_vm._v("2011-2012 2 Étés")]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "column sg-floatr sg-dateforma sg-forma is-two-thirds"
-                      },
-                      [
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v(
-                            "\n                                    Employée :\n                                    "
-                          ),
-                          _c("span", [
-                            _vm._v(
-                              "\n                                        communal à Houffalize Ménage et\n                                        garderie\n                                    "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v(
-                            "\n                                    Étudiante :\n                                    "
-                          ),
-                          _c("span", [_vm._v("commit de cuisine et plonge")])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v(
-                            "\n                                    Étudiante :\n                                    "
-                          ),
-                          _c("span", [_vm._v("Ménage")])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "sg-bottom" }, [
-                          _vm._v(
-                            "\n                                    Étudiante :\n                                    "
-                          ),
-                          _c("span", [
-                            _vm._v("Accueil, animation, ménage et cafétéria")
-                          ])
+                        _c("div", { staticClass: "control" }, [
+                          _c("textarea", {
+                            staticClass: "textarea",
+                            attrs: { placeholder: "Textarea" }
+                          })
                         ])
-                      ]
-                    )
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("CarouselSlide", [
-                _c("div", { staticClass: "box box-carousel sg-box" }, [
-                  _c("h1", { staticClass: "title sg-right sg-min" }, [
-                    _vm._v("Contact me")
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "columns" }, [
-                    _c("div", { staticClass: "column" }, [
-                      _c(
-                        "div",
-                        { staticClass: "columns is-mobile sg-bottom" },
-                        [
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "field is-grouped" }, [
+                        _c("div", { staticClass: "control" }, [
                           _c(
-                            "div",
-                            { staticClass: "column is-one-quarter sg-padding" },
-                            [
-                              _c("span", { staticClass: "is-size-3" }, [
-                                _c("i", {
-                                  staticClass: "fab fa-facebook-square"
-                                })
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
+                            "button",
                             {
-                              staticClass: "column",
-                              attrs: {
-                                href:
-                                  "https://www.facebook.com/sarah.guillaume.140/"
-                              }
+                              staticClass: "button sg-button is-link",
+                              attrs: { type: "submit", value: "Envoyer" }
                             },
-                            [_vm._v("Facebook")]
+                            [_vm._v("Submit")]
                           )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "columns is-mobile sg-bottom" },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "column is-one-quarter sg-padding" },
-                            [
-                              _c("span", { staticClass: "is-size-3" }, [
-                                _c("i", { staticClass: "fab fa-github" })
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "column",
-                              attrs: { href: "https://github.com/SarahG4000" }
-                            },
-                            [_vm._v("Sarah")]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "columns is-mobile sg-bottom" },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "column is-one-quarter sg-padding" },
-                            [
-                              _c("span", { staticClass: "is-size-3" }, [
-                                _c("i", { staticClass: "fab fa-linkedin" })
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "column",
-                              attrs: {
-                                href:
-                                  "https://www.linkedin.com/in/sarah-guillaume-06993219a/"
-                              }
-                            },
-                            [_vm._v("Linkedin")]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "columns is-mobile sg-bottom" },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "column is-one-quarter sg-padding" },
-                            [
-                              _c("span", { staticClass: "is-size-3" }, [
-                                _c("i", { staticClass: "fas fa-envelope" })
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "column" }, [
-                            _vm._v("sarah.guillaume4000@gmail.com")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "columns is-mobile sg-bottom" },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "column is-one-quarter sg-padding" },
-                            [
-                              _c("span", { staticClass: "is-size-3" }, [
-                                _c("i", { staticClass: "fab fa-discord" })
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "column" }, [
-                            _vm._v("SarahG#4150")
-                          ])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "column" }, [
-                      _c(
-                        "form",
-                        {
-                          attrs: {
-                            method: "",
-                            action: "javascript:sendMail()",
-                            name: "envoi",
-                            enctype: "text/plain"
-                          }
-                        },
-                        [
-                          _c("div", { staticClass: "field" }, [
-                            _c("label", { staticClass: "label" }, [
-                              _vm._v("Name")
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "control has-icons-left has-icons-right"
-                              },
-                              [
-                                _c("input", {
-                                  staticClass: "input",
-                                  attrs: {
-                                    type: "text",
-                                    placeholder: "Text input",
-                                    value: "Name"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "icon is-small is-left" },
-                                  [_c("i", { staticClass: "fas fa-user" })]
-                                )
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "field" }, [
-                            _c("label", { staticClass: "label" }, [
-                              _vm._v("Email")
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "control has-icons-left has-icons-right"
-                              },
-                              [
-                                _c("input", {
-                                  staticClass: "input",
-                                  attrs: {
-                                    type: "email",
-                                    placeholder: "Email input",
-                                    value: "mail@"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "icon is-small is-left" },
-                                  [_c("i", { staticClass: "fas fa-envelope" })]
-                                )
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "field" }, [
-                            _c("label", { staticClass: "label" }, [
-                              _vm._v("Message")
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "control" }, [
-                              _c("textarea", {
-                                staticClass: "textarea",
-                                attrs: { placeholder: "Textarea" }
-                              })
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "field is-grouped" }, [
-                            _c("div", { staticClass: "control" }, [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "button is-link",
-                                  attrs: { type: "submit", value: "Envoyer" }
-                                },
-                                [_vm._v("Submit")]
-                              )
-                            ])
-                          ])
-                        ]
-                      )
-                    ])
-                  ])
+                        ])
+                      ])
+                    ]
+                  )
                 ])
               ])
-            ],
-            1
-          )
+            ])
+          ])
         ],
         1
       )
-    ])
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -9803,7 +9751,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-df312a",
+            _scopeId: null,
             functional: undefined
           };
         })());
@@ -9829,159 +9777,7 @@ render._withStripped = true
       
       }
     })();
-},{"./carousel/Carousel.vue":"components/carousel/Carousel.vue","./carousel/CarouselSlide.vue":"components/carousel/CarouselSlide.vue","./../assets/IMG_20200520_145947.jpg":[["IMG_20200520_145947.8c23fea6.jpg","assets/IMG_20200520_145947.jpg"],"assets/IMG_20200520_145947.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/navapp.vue":[function(require,module,exports) {
-"use strict";
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var vue_1 = __importDefault(require("vue"));
-
-exports.default = vue_1.default.extend({
-  data: function data() {
-    return {
-      home: "Contact me",
-      competence: "Compétences",
-      experience: "Expériences",
-      formation: "Formations"
-    };
-  }
-});
-        var $6faf82 = exports.default || module.exports;
-      
-      if (typeof $6faf82 === 'function') {
-        $6faf82 = $6faf82.options;
-      }
-    
-        /* template */
-        Object.assign($6faf82, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "nav",
-    {
-      staticClass: "navbar is-dark is-0-mobile",
-      attrs: { role: "navigation", "aria-label": "dropdown navigation" }
-    },
-    [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "navbar-menu" }, [
-        _c("div", { staticClass: "navbar-end" }, [
-          _c("div", { staticClass: "navbar-item has-dropdown is-hoverable" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c("div", { staticClass: "navbar-dropdown is-boxed" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "navbar-item is-hoverable",
-                  attrs: { href: "/index.html" }
-                },
-                [_vm._v(_vm._s(_vm.home))]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "navbar-item is-hoverable",
-                  attrs: { href: "/index.html" }
-                },
-                [_vm._v(_vm._s(_vm.formation))]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "navbar-item is-hoverable",
-                  attrs: { href: "/index.html" }
-                },
-                [_vm._v(_vm._s(_vm.competence))]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "navbar-item is-hoverable",
-                  attrs: { href: "/index.html" }
-                },
-                [_vm._v(_vm._s(_vm.experience))]
-              )
-            ])
-          ])
-        ])
-      ])
-    ]
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "navbar-brand" }, [
-      _c("a", { staticClass: "navbar-item" }, [
-        _c("h1", { staticClass: "title has-text-white-ter" }, [
-          _c("span", [_c("i", { staticClass: "far fa-address-card" })])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "navbar-link sg-nav" }, [
-      _c("span", { staticClass: "icon s-size-5" }, [
-        _c("i", {
-          staticClass: "fas fa-users has-text-white-ter sg-profilicon"
-        })
-      ])
-    ])
-  }
-]
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$6faf82', $6faf82);
-          } else {
-            api.reload('$6faf82', $6faf82);
-          }
-        }
-
-        
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-      }
-    })();
-},{"vue":"../node_modules/vue/dist/vue.runtime.esm.js","./../index.html":[["index.html","index.html"],"index.html"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js"}],"../node_modules/bulma/bulma.sass":[function(require,module,exports) {
+},{"./carousel/Carousel.vue":"components/carousel/Carousel.vue","./carousel/CarouselSlide.vue":"components/carousel/CarouselSlide.vue","./../assets/IMG_20200520_145947.jpg":[["IMG_20200520_145947.8c23fea6.jpg","assets/IMG_20200520_145947.jpg"],"assets/IMG_20200520_145947.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"../node_modules/bulma/bulma.sass":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -9994,8 +9790,6 @@ var _vue = _interopRequireDefault(require("vue"));
 
 var _app = _interopRequireDefault(require("./components/app.vue"));
 
-var _navapp = _interopRequireDefault(require("./components/navapp.vue"));
-
 require("bulma");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -10005,13 +9799,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * src/index.js - container for app
  * start created 14/07/2020
  */
+// import Navapp from "./components/navapp.vue";
 new _vue.default({
   render: function render(createElement) {
     return createElement(_app.default);
   }
 }).$mount("#app"); // new Vue({render: createElement => createElement(Navapp)}).$mount("#navapp");
 // console.log("hello word:!!");
-},{"vue":"../node_modules/vue/dist/vue.runtime.esm.js","./components/app.vue":"components/app.vue","./components/navapp.vue":"components/navapp.vue","bulma":"../node_modules/bulma/bulma.sass"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.runtime.esm.js","./components/app.vue":"components/app.vue","bulma":"../node_modules/bulma/bulma.sass"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -10039,7 +9834,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39509" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34131" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

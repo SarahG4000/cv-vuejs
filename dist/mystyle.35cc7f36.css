@@ -4,13 +4,13 @@
 }
 
 html {
-    background: #646363 !important;
-    color: white !important;
+    background: white !important;
+    color: #646363 !important;
 }
 
 h1 {
 
-    color: #646363;
+    color: #646363 !important;
 }
 
 /*# sourceMappingURL=/mystyle.35cc7f36.css.map */

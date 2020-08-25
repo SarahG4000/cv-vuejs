@@ -1,192 +1,213 @@
+@charset "UTF-8";
 .carousel {
-    position: relative;
+  position: relative;
 }
 
 .carousel__nav {
-    position: absolute !important;
-    margin-top: -31px;
-    top: 50px;
-    left: 10px;
+  position: absolute !important;
+  margin-top: -31px;
+  top: 50px;
+  left: 10px;
 }
+
 .carousel.carousel__next {
-    right: 10px;
-    left: auto;
+  right: 10px;
+  left: auto;
 }
 
 button {
-    background: #646363 !important;
-    color: white !important;
-    font-size: 35px;
+  background: white !important;
+  color: #646363 !important;
+  font-size: 35px !important;
+  border: none;
+  margin-top: 50vh !important;
+  /* poussé de la moitié de hauteur de viewport */
+  transform: translateY(-145%) !important;
 }
 
 .sg-next {
-    float: right;
-    margin-right: -64px;
-    height: 473.5px !important;
-    margin-top: -49px;
-    border: #dfdbdb solid 1px !important;
-    border-radius: 0 !important;
+  float: right;
+  margin-right: -9px;
+  margin-top: 150px;
 }
 
 .sg-prev {
-    float: left;
-    height: 473.5px !important;
-    margin-left: -67px;
-    margin-top: -49px;
-    border: #dfdbdb solid 1px !important;
-    border-radius: 0 !important;
+  float: left;
+  margin-left: -9px;
+  margin-top: 150px;
 }
 
 .size-sg {
-    font-size: 70px;
+  font-size: 70px;
 }
 
 .sg-align {
-    top: -12px;
+  top: -12px;
 }
 .slide-enter-active {
-    animation: flipInX 3s;
+  /*animation d'entre et leave anomation de sortie*/
+  animation: rollIn 2s;
 }
 
 .slide-leave-active {
-    animation: flipOutX 1s;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-}
-
-/* @keyframes bounceInDown {
-    from {
-        transform: translateY(200%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounceOutDown {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-200%);
-    }
-} */
-.container[data-v-df312a] {
-  color: #434343 !important;
-  position: fixed;
-  top: 35px;
-  right: 0;
+  animation: rollOut 1s;
+  position: absolute;
+  top: 0;
   bottom: 0;
-  left: 0;
-  display: flex;
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-  background: "rgba(0,0,0,0.5)";
-  position: relative;
-  z-index: 5;
 }
-.sg-40px[data-v-df312a] {
-  margin-right: 40px;
-  flex: none;
-  width: 24% !important;
+@charset "UTF-8";
+.container {
+  color: #646363 !important;
+  top: 0;
+  max-width: 100% !important;
+  max-height: 100% !important;
 }
-a[data-v-df312a] {
-  color: #8d1414;
+
+.sg-button {
+  font-size: 20px !important;
 }
-.sg-grand[data-v-df312a] {
+
+.box {
+  position: absolute;
+  z-index: 20;
+  margin-left: 39%;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #646363 !important;
+  border: #646363 1px solid !important;
+  margin-top: 50vh !important;
+  /* poussé de la moitié de hauteur de viewport */
+  transform: translateY(-55%) !important;
+}
+
+.sg-style0 {
+  width: 9% !important;
+}
+
+.sg-style1 {
+  margin-right: 0% !important;
+}
+
+.sg-style2 {
+  margin-right: -2% !important;
+}
+
+a {
+  color: #646363 !important;
+}
+
+a:hover {
+  color: #8d1414 !important;
+}
+
+.color-sg {
+  color: #646363 !important;
+}
+
+.bottom-sg {
+  margin-bottom: 110px !important;
+}
+
+.sg-grand {
   font-size: 20px;
 }
-.margin-sg[data-v-df312a] {
+
+.margin-sg {
   margin-left: 105px;
 }
-.sg-cont[data-v-df312a] {
-  background: #646363 !important;
+
+.sg-cont {
+  background: white !important;
 }
-nav[data-v-df312a] {
+
+nav {
   position: absolute;
   z-index: 10;
 }
-form[data-v-df312a] {
-  margin-top: -100px;
+
+form {
+  margin-top: 5px;
 }
-.img[data-v-df312a] {
+
+.img {
   height: auto;
   max-width: 60%;
   margin-left: 19%;
 }
-.sg[data-v-df312a] {
+
+.sg {
   border-left: 3px solid #8d1414;
   margin: 25px;
 }
-.sg-right[data-v-df312a] {
+
+.sg-right {
   border-right: 3px solid #8d1414;
   margin: 25px;
 }
-.sg-min[data-v-df312a] {
+
+.sg-min {
   width: 190px;
 }
-.sg-padding[data-v-df312a] {
-  padding: 0 0 0 82px;
+
+.sg-padding {
+  padding: 0 0 0 82px !important;
 }
-.sg-title[data-v-df312a] {
+
+.sg-title {
   margin-top: -10px;
   margin-bottom: 10px;
   color: #646363 !important;
 }
-.padding-sg[data-v-df312a] {
+
+.padding-sg {
   padding-left: 17px;
 }
-.sg-box[data-v-df312a] {
-  height: 475px;
+
+.sg-box {
+  color: #646363;
 }
-.box[data-v-df312a] {
-  background-color: #dfdbdb !important;
-  color: #646363 !important;
-  border-radius: 0;
-}
-.box-carousel[data-v-df312a] {
-  border-color: #8d8d8c;
-  border: 1px solid;
-  color: #646363 !important;
-}
-.sg-dateforma[data-v-df312a] {
+
+.sg-dateforma {
   margin-top: 50px;
   font-size: 20px;
 }
-.sg-forma[data-v-df312a] {
+
+.sg-forma {
   font-size: 22px;
   color: #646363;
 }
-.sg-floatr[data-v-df312a] {
+
+.sg-floatr {
   float: right;
 }
-.sg-bottom[data-v-df312a] {
+
+.sg-bottom {
   margin-bottom: 15px;
+  margin-top: 23px !important;
 }
-.sg-paddingforma[data-v-df312a] {
-  padding-top: 6px;
+
+.sg-paddingforma {
+  padding-top: 36px;
 }
-.sg-paddingforma2[data-v-df312a] {
+
+.sg-paddingforma2 {
   padding-top: 3px;
 }
-span[data-v-df312a] {
+
+span {
   color: #8d1414;
 }
-.i-sg[data-v-df312a] {
+
+.i-sg {
   margin-right: 11px;
   font-size: 25px;
 }
-.button[data-v-df312a]:active,
-.button[data-v-df312a]:hover,
-.butto.is-hovered[data-v-df312a],
-.button.is-active[data-v-df312a] {
+
+.button:active,
+.button:hover,
+.butto.is-hovered,
+.button.is-active {
   border: none;
-}
-nav {
-    position: relative;
-    z-index: 10;
 }
 @charset "UTF-8";
 /*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */

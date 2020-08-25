@@ -6,7 +6,7 @@
 
 import Vue from "vue";
 import App from "./components/app.vue";
-import Navapp from "./components/navapp.vue";
+// import Navapp from "./components/navapp.vue";
 import "bulma";
 
 new Vue({render: createElement => createElement(App)}).$mount("#app");
