@@ -8542,7 +8542,165 @@ if (inBrowser) {
 
 var _default = Vue;
 exports.default = _default;
-},{}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{}],"../node_modules/emailjs-com/source/models/EmailJSResponseStatus.js":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmailJSResponseStatus = void 0;
+var EmailJSResponseStatus = /** @class */ (function () {
+    function EmailJSResponseStatus(httpResponse) {
+        this.status = httpResponse.status;
+        this.text = httpResponse.responseText;
+    }
+    return EmailJSResponseStatus;
+}());
+exports.EmailJSResponseStatus = EmailJSResponseStatus;
+
+},{}],"../node_modules/emailjs-com/source/services/ui/UI.js":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UI = void 0;
+var UI = /** @class */ (function () {
+    function UI() {
+    }
+    UI.clearAll = function (form) {
+        form.classList.remove(this.PROGRESS);
+        form.classList.remove(this.DONE);
+        form.classList.remove(this.ERROR);
+    };
+    UI.progressState = function (form) {
+        this.clearAll(form);
+        form.classList.add(this.PROGRESS);
+    };
+    UI.successState = function (form) {
+        form.classList.remove(this.PROGRESS);
+        form.classList.add(this.DONE);
+    };
+    UI.errorState = function (form) {
+        form.classList.remove(this.PROGRESS);
+        form.classList.add(this.ERROR);
+    };
+    UI.PROGRESS = 'emailjs-sending';
+    UI.DONE = 'emailjs-success';
+    UI.ERROR = 'emailjs-error';
+    return UI;
+}());
+exports.UI = UI;
+
+},{}],"../node_modules/emailjs-com/source/index.js":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmailJSResponseStatus = exports.sendForm = exports.send = exports.init = void 0;
+var EmailJSResponseStatus_1 = require("./models/EmailJSResponseStatus");
+Object.defineProperty(exports, "EmailJSResponseStatus", { enumerable: true, get: function () { return EmailJSResponseStatus_1.EmailJSResponseStatus; } });
+var UI_1 = require("./services/ui/UI");
+var _userID = null;
+var _origin = 'https://api.emailjs.com';
+function sendPost(url, data, headers) {
+    if (headers === void 0) { headers = {}; }
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', function (event) {
+            var responseStatus = new EmailJSResponseStatus_1.EmailJSResponseStatus(event.target);
+            if (responseStatus.status === 200 || responseStatus.text === 'OK') {
+                resolve(responseStatus);
+            }
+            else {
+                reject(responseStatus);
+            }
+        });
+        xhr.addEventListener('error', function (event) {
+            reject(new EmailJSResponseStatus_1.EmailJSResponseStatus(event.target));
+        });
+        xhr.open('POST', url, true);
+        for (var key in headers) {
+            xhr.setRequestHeader(key, headers[key]);
+        }
+        xhr.send(data);
+    });
+}
+function appendGoogleCaptcha(templatePrams) {
+    var element = document && document.getElementById('g-recaptcha-response');
+    if (element && element.value) {
+        templatePrams['g-recaptcha-response'] = element.value;
+    }
+    element = null;
+    return templatePrams;
+}
+function fixIdSelector(selector) {
+    if (selector[0] !== '#') {
+        return '#' + selector;
+    }
+    return selector;
+}
+/**
+ * Initiation
+ * @param {string} userID - set the EmailJS user ID
+ * @param {string} origin - set the EmailJS origin
+ */
+function init(userID, origin) {
+    _userID = userID;
+    _origin = origin || 'https://api.emailjs.com';
+}
+exports.init = init;
+/**
+ * Send a template to the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {Object} templatePrams - the template params, what will be set to the EmailJS template
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+function send(serviceID, templateID, templatePrams, userID) {
+    var params = {
+        lib_version: '2.6.3',
+        user_id: userID || _userID,
+        service_id: serviceID,
+        template_id: templateID,
+        template_params: appendGoogleCaptcha(templatePrams)
+    };
+    return sendPost(_origin + '/api/v1.0/email/send', JSON.stringify(params), {
+        'Content-type': 'application/json'
+    });
+}
+exports.send = send;
+/**
+ * Send a form the specific EmailJS service
+ * @param {string} serviceID - the EmailJS service ID
+ * @param {string} templateID - the EmailJS template ID
+ * @param {string | HTMLFormElement} form - the form element or selector
+ * @param {string} userID - the EmailJS user ID
+ * @returns {Promise<EmailJSResponseStatus>}
+ */
+function sendForm(serviceID, templateID, form, userID) {
+    if (typeof form === 'string') {
+        form = document.querySelector(fixIdSelector(form));
+    }
+    if (!form || form.nodeName !== 'FORM') {
+        throw 'Expected the HTML form element or the style selector of form';
+    }
+    UI_1.UI.progressState(form);
+    var formData = new FormData(form);
+    formData.append('lib_version', '2.6.3');
+    formData.append('service_id', serviceID);
+    formData.append('template_id', templateID);
+    formData.append('user_id', userID || _userID);
+    return sendPost(_origin + '/api/v1.0/email/send-form', formData)
+        .then(function (response) {
+        UI_1.UI.successState(form);
+        return response;
+    }, function (error) {
+        UI_1.UI.errorState(form);
+        return Promise.reject(error);
+    });
+}
+exports.sendForm = sendForm;
+exports.default = {
+    init: init,
+    send: send,
+    sendForm: sendForm
+};
+
+},{"./models/EmailJSResponseStatus":"../node_modules/emailjs-com/source/models/EmailJSResponseStatus.js","./services/ui/UI":"../node_modules/emailjs-com/source/services/ui/UI.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -8949,14 +9107,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $e0efe6 = exports.default || module.exports;
+        var $361427 = exports.default || module.exports;
       
-      if (typeof $e0efe6 === 'function') {
-        $e0efe6 = $e0efe6.options;
+      if (typeof $361427 === 'function') {
+        $361427 = $361427.options;
       }
     
         /* template */
-        Object.assign($e0efe6, (function () {
+        Object.assign($361427, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -9022,9 +9180,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$e0efe6', $e0efe6);
+            api.createRecord('$361427', $361427);
           } else {
-            api.reload('$e0efe6', $e0efe6);
+            api.reload('$361427', $361427);
           }
         }
 
@@ -9065,14 +9223,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $dbed36 = exports.default || module.exports;
+        var $b7287c = exports.default || module.exports;
       
-      if (typeof $dbed36 === 'function') {
-        $dbed36 = $dbed36.options;
+      if (typeof $b7287c === 'function') {
+        $b7287c = $b7287c.options;
       }
     
         /* template */
-        Object.assign($dbed36, (function () {
+        Object.assign($b7287c, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -9115,9 +9273,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$dbed36', $dbed36);
+            api.createRecord('$b7287c', $b7287c);
           } else {
-            api.reload('$dbed36', $dbed36);
+            api.reload('$b7287c', $b7287c);
           }
         }
 
@@ -9165,9 +9323,18 @@ var __importStar = this && this.__importStar || function (mod) {
   return result;
 };
 
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var emailjs_com_1 = __importDefault(require("emailjs-com"));
+
 exports.default = {
   data: function data() {
     return {
@@ -9191,16 +9358,25 @@ exports.default = {
         return __importStar(require("./carousel/CarouselSlide.vue"));
       });
     }
+  },
+  methods: {
+    sendEmail: function sendEmail(e) {
+      emailjs_com_1.default.sendForm("gmail", "template_Khm5wO6u", e.target, "user_RKLJmk9BAH3acOqOCgdmB").then(function (result) {
+        console.log("SUCCESS!", result.status, result.text);
+      }, function (error) {
+        console.log("FAILED...", error);
+      });
+    }
   }
 };
-        var $df312a = exports.default || module.exports;
+        var $f38bd7 = exports.default || module.exports;
       
-      if (typeof $df312a === 'function') {
-        $df312a = $df312a.options;
+      if (typeof $f38bd7 === 'function') {
+        $f38bd7 = $f38bd7.options;
       }
     
         /* template */
-        Object.assign($df312a, (function () {
+        Object.assign($f38bd7, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -9211,7 +9387,7 @@ exports.default = {
     [
       _c("div", { staticClass: "box column is-one-fifth" }, [
         _c("h1", { staticClass: "sg-right title is-family-primary color-sg" }, [
-          _vm._v(_vm._s(_vm.bundler))
+          _vm._v("\n            " + _vm._s(_vm.bundler) + "\n        ")
         ]),
         _vm._v(" "),
         _c("img", {
@@ -9222,7 +9398,7 @@ exports.default = {
         _c(
           "h2",
           { staticClass: "sg title is-family-primary padding-sg color-sg" },
-          [_vm._v(_vm._s(_vm.jobs))]
+          [_vm._v("\n            " + _vm._s(_vm.jobs) + "\n        ")]
         )
       ]),
       _vm._v(" "),
@@ -9233,7 +9409,11 @@ exports.default = {
             _c("div", { staticClass: "sg-box" }, [
               _c("div", [
                 _c("h1", { staticClass: "title sg padding-sg bottom-sg" }, [
-                  _vm._v(_vm._s(_vm.competence))
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(_vm.competence) +
+                      "\n                    "
+                  )
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "columns" }, [
@@ -9361,7 +9541,11 @@ exports.default = {
             _c("div", { staticClass: "sg-box" }, [
               _c("div", [
                 _c("h1", { staticClass: "title sg-right sg-min bottom-sg" }, [
-                  _vm._v(_vm._s(_vm.formation))
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(_vm.formation) +
+                      "\n                    "
+                  )
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "columns is-mobile sg-dateforma" }, [
@@ -9369,23 +9553,33 @@ exports.default = {
                   _vm._v(" "),
                   _c("div", { staticClass: "column is-one-third" }, [
                     _c("div", { staticClass: "sg-bottom" }, [
-                      _vm._v("Janvier 2020 a maintenant")
+                      _vm._v(
+                        "\n                                Janvier 2020 a maintenant\n                            "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "sg-bottom sg-paddingforma2" }, [
-                      _vm._v("2017-2019")
+                      _vm._v(
+                        "\n                                2017-2019\n                            "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "sg-bottom sg-paddingforma" }, [
-                      _vm._v("2013-2015")
+                      _vm._v(
+                        "\n                                2013-2015\n                            "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "sg-bottom sg-paddingforma" }, [
-                      _vm._v("2011-2013")
+                      _vm._v(
+                        "\n                                2011-2013\n                            "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "sg-bottom sg-paddingform11" }, [
-                      _vm._v("2008-2011")
+                      _vm._v(
+                        "\n                                2008-2011\n                            "
+                      )
                     ])
                   ]),
                   _vm._v(" "),
@@ -9398,12 +9592,10 @@ exports.default = {
                     { staticClass: "column sg-floatr sg-forma is-one-third" },
                     [
                       _c("div", { staticClass: "sg-bottom" }, [
-                        _c("span", [
-                          _vm._v(
-                            "\n                                    Formation\n                                    Becode\n                                "
-                          )
-                        ]),
-                        _vm._v(" Liège\n                            ")
+                        _c("span", [_vm._v("Formation Becode")]),
+                        _vm._v(
+                          "\n                                Liège\n                            "
+                        )
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "sg-bottom" }, [
@@ -9415,14 +9607,14 @@ exports.default = {
                       _vm._v(" "),
                       _c("div", { staticClass: "sg-bottom" }, [
                         _vm._v(
-                          "\n                                Saint-Luc secondaire à Liège 5éme et 6éme\n                                "
+                          "\n                                Saint-Luc secondaire à Liège 5ème et 6ème\n                                "
                         ),
                         _c("span", [_vm._v("infographie")])
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "sg-bottom" }, [
                         _vm._v(
-                          "\n                                ARBH Bastogne 4éme section science forte et 5éme\n                                "
+                          "\n                                ARBH Bastogne 4ème section science forte et\n                                5éme\n                                "
                         ),
                         _c("span", [_vm._v("section art")])
                       ]),
@@ -9431,7 +9623,7 @@ exports.default = {
                         _vm._v(
                           "\n                                ARBH Houffalize\n                                "
                         ),
-                        _c("span", [_vm._v("1er, 2éme et 3éme général")])
+                        _c("span", [_vm._v("1er, 2ème et 3ème général")])
                       ])
                     ]
                   )
@@ -9443,7 +9635,11 @@ exports.default = {
           _c("CarouselSlide", [
             _c("div", { staticClass: "sg-box" }, [
               _c("h1", { staticClass: "title sg padding-sg bottom-sg" }, [
-                _vm._v(_vm._s(_vm.experience))
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.experience) +
+                    "\n                "
+                )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "columns is-mobile" }, [
@@ -9454,19 +9650,25 @@ exports.default = {
                   { staticClass: "column sg-dateforma is-one-third is-mobile" },
                   [
                     _c("div", { staticClass: "sg-bottom" }, [
-                      _vm._v("2015-2017 18 mois")
+                      _vm._v("2015-2017 : 18 mois")
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "sg-bottom sg-paddingforma" }, [
-                      _vm._v("2014 6 mois")
+                      _vm._v(
+                        "\n                            2014 : 6 mois\n                        "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "sg-bottom sg-paddingforma2" }, [
-                      _vm._v("2013 2 mois")
+                      _vm._v(
+                        "\n                            2013 : 2 mois\n                        "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "sg-bottom sg-paddingforma2" }, [
-                      _vm._v("2011-2012 2 Étés")
+                      _vm._v(
+                        "\n                            Étés : 2011-2012\n                        "
+                      )
                     ])
                   ]
                 ),
@@ -9484,20 +9686,16 @@ exports.default = {
                   [
                     _c("div", { staticClass: "sg-bottom" }, [
                       _vm._v(
-                        "\n                            Employée :\n                            "
+                        "\n                            Employée Communale :\n                            "
                       ),
-                      _c("span", [
-                        _vm._v(
-                          "\n                                communal à Houffalize Ménage et\n                                garderie\n                            "
-                        )
-                      ])
+                      _c("span", [_vm._v("Houffalize Ménage et garderie")])
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "sg-bottom" }, [
                       _vm._v(
                         "\n                            Étudiante :\n                            "
                       ),
-                      _c("span", [_vm._v("commit de cuisine et plonge")])
+                      _c("span", [_vm._v("Commis de cuisine et plonge")])
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "sg-bottom" }, [
@@ -9512,7 +9710,9 @@ exports.default = {
                         "\n                            Étudiante :\n                            "
                       ),
                       _c("span", [
-                        _vm._v("Accueil, animation, ménage et cafétéria")
+                        _vm._v(
+                          "\n                                Accueil, animation, ménage et cafétéria\n                            "
+                        )
                       ])
                     ])
                   ]
@@ -9613,7 +9813,9 @@ exports.default = {
                     ),
                     _vm._v(" "),
                     _c("p", { staticClass: "column" }, [
-                      _vm._v("sarah.guillaume4000@gmail.com")
+                      _vm._v(
+                        "\n                                sarah.guillaume4000@gmail.com\n                            "
+                      )
                     ])
                   ]),
                   _vm._v(" "),
@@ -9641,10 +9843,15 @@ exports.default = {
                     "form",
                     {
                       attrs: {
-                        method: "",
                         action: "javascript:sendMail()",
                         name: "envoi",
                         enctype: "text/plain"
+                      },
+                      on: {
+                        submit: function($event) {
+                          $event.preventDefault()
+                          return _vm.sendEmail($event)
+                        }
                       }
                     },
                     [
@@ -9662,8 +9869,8 @@ exports.default = {
                               staticClass: "input",
                               attrs: {
                                 type: "text",
-                                placeholder: "Text input",
-                                value: "Name"
+                                placeholder: "Your name",
+                                name: "user_name"
                               }
                             }),
                             _vm._v(" "),
@@ -9692,8 +9899,8 @@ exports.default = {
                               staticClass: "input",
                               attrs: {
                                 type: "email",
-                                placeholder: "Email input",
-                                value: "mail@"
+                                placeholder: "@mail",
+                                name: "user_email"
                               }
                             }),
                             _vm._v(" "),
@@ -9714,7 +9921,7 @@ exports.default = {
                         _c("div", { staticClass: "control" }, [
                           _c("textarea", {
                             staticClass: "textarea",
-                            attrs: { placeholder: "Textarea" }
+                            attrs: { name: "message", placeholder: "Textarea" }
                           })
                         ])
                       ]),
@@ -9725,9 +9932,13 @@ exports.default = {
                             "button",
                             {
                               staticClass: "button sg-button is-link",
-                              attrs: { type: "submit", value: "Envoyer" }
+                              attrs: { type: "submit", value: "Send" }
                             },
-                            [_vm._v("Submit")]
+                            [
+                              _vm._v(
+                                "\n                                        Submit\n                                    "
+                              )
+                            ]
                           )
                         ])
                       ])
@@ -9764,9 +9975,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$df312a', $df312a);
+            api.createRecord('$f38bd7', $f38bd7);
           } else {
-            api.reload('$df312a', $df312a);
+            api.reload('$f38bd7', $f38bd7);
           }
         }
 
@@ -9777,7 +9988,7 @@ render._withStripped = true
       
       }
     })();
-},{"./carousel/Carousel.vue":"components/carousel/Carousel.vue","./carousel/CarouselSlide.vue":"components/carousel/CarouselSlide.vue","./../assets/IMG_20200520_145947.jpg":[["IMG_20200520_145947.8c23fea6.jpg","assets/IMG_20200520_145947.jpg"],"assets/IMG_20200520_145947.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"../node_modules/bulma/bulma.sass":[function(require,module,exports) {
+},{"emailjs-com":"../node_modules/emailjs-com/source/index.js","./carousel/Carousel.vue":"components/carousel/Carousel.vue","./carousel/CarouselSlide.vue":"components/carousel/CarouselSlide.vue","./../assets/IMG_20200520_145947.jpg":[["IMG_20200520_145947.8c23fea6.jpg","assets/IMG_20200520_145947.jpg"],"assets/IMG_20200520_145947.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"../node_modules/bulma/bulma.sass":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -9834,7 +10045,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34131" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36419" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
